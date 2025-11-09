@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 50%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #fffaf6;
+  overflow-x: hidden;
+  color: #2f3559;
+}
+
+/*HEADER*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 18%;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  background-color: #ffffffa4;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.img-logo {
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 80px;
+  height: 60px;
+}
+
+.img-logo:hover {
+  transform: scale(1.1);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  display: none;
+  cursor: pointer;
+}
+
+/*NAV BAR*/
+.navbar a {
+  font-size: 1.8rem;
+  color: #2f3559;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 0.5rem;
+}
+
+.navbar a:hover {
+  color: #d47618;
+}
+
+.navbar a.active {
+  color: #d47618;
+}
+
+/*FOOTER */
+/* Faixa laranja estreita */
+.footer-bar {
+  width: 100%;
+  height: 10px; /* altura da faixinha */
+  background-color: #d47618;
+}
+
+/* Resto do footer */
+.footer-top {
+  background: #fffaf6;
+  padding: 60px 18%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.footer-info h2 {
+  font: 700 3.2rem/1.2 Poppins, sans-serif;
+  color: #2f3559;
+  margin-bottom: 16px;
+}
+
+.footer-info p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.footer-info a {
+  color: #d47618;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Formulário */
+.contact-form {
+  width: 100%;
+}
+
+.form-row {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.form-row.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid #cfcbd4;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font: 500 1.4rem/1.4 Poppins, sans-serif;
+  color: #2f3559;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8b86a1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2f3559;
+  box-shadow: 0 0 0 3px rgba(47, 53, 89, 0.08);
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 16px;
+  background: #d47618;
+  color: #fff;
+  font: 700 1.5rem/1 Poppins, sans-serif;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.02s;
+}
+
+.btn-submit:hover {
+  filter: brightness(1.02);
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+}
+
+/* Faixa azul inferior */
+.footer-bottom {
+  background: #2f3559;
+  color: #fff;
+  text-align: center;
+  padding: 22px 12px;
+  font-size: 1.4rem;
+}
+
+/* Responsividade footer */
+@media (max-width: 820px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .form-row.two {
+    grid-template-columns: 1fr;
+  }
+}
