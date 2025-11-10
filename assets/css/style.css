@@ -393,3 +393,7 @@ body {
     display: none;
   }
 }
+/* Evita que menus diferentes fiquem laranja ao mesmo tempo */
+.navbar .has-dropdown.encruzilhadas > a.active {
+  color: #2f3559 !important;
+}
