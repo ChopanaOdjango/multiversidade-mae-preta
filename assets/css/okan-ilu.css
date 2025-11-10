@@ -1,0 +1,194 @@
+.okan-section {
+  background: linear-gradient(180deg, #2f3559 0%, #26314f 100%);
+  padding: 120px 0 60px;
+  color: #fff;
+}
+
+.okan-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10%;
+  position: relative;
+}
+
+/* voltar */
+.okan-back {
+  position: absolute;
+  top: 0;
+  left: calc(18% - 28px);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+
+  color: #fff;
+  font-size: 6rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+.okan-back:hover {
+  color: #d47618;
+}
+
+/* títulos */
+.okan-title {
+  text-align: center;
+  font-family: "Chelsea Market", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 4.8rem;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 10px 0 6px;
+}
+
+.okan-legend {
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  color: #d47618;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+}
+
+.okan-text {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  max-width: 950px;
+  margin: 0 auto 28px;
+  color: #e9ecf4;
+  font-size: 1.9rem;
+  line-height: 2;
+}
+.okan-text p + p {
+  margin-top: 12px;
+}
+
+.okan-subtitle {
+  text-align: center;
+  font-family: "Chelsea Market", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 3.2rem;
+  color: #ffffff;
+  margin: 30px 0 14px;
+}
+.okan-legend {
+  font-size: 2.3rem;
+}
+
+/* tambor no coração img*/
+.okan-symbol {
+  display: grid;
+  place-items: center;
+  margin: 8px 0 22px;
+}
+.okan-symbol img {
+  height: 110px;
+  width: auto;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
+}
+
+/* galeria */
+.okan-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+.okan-gallery figure {
+  margin: 0;
+  background: #101a36;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+.okan-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.okan-gallery figure:hover img {
+  transform: scale(1.03);
+}
+
+/* imagem destaque grande */
+.okan-hero {
+  margin: 22px auto 0;
+  max-width: 980px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.okan-video {
+  margin: 40px auto;
+  max-width: 1000px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  aspect-ratio: 16 / 9;
+}
+
+.okan-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* responsividade */
+@media (max-width: 1100px) {
+  .okan-container {
+    padding: 0 12%;
+  }
+  .okan-back {
+    left: calc(12% - 28px);
+  }
+}
+
+@media (max-width: 900px) {
+  .okan-title {
+    font-size: 3.6rem;
+  }
+  .okan-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .okan-section {
+    padding-top: 100px;
+  }
+  .okan-container {
+    padding: 0 8%;
+  }
+  .okan-back {
+    left: calc(8% - 24px);
+    width: 32px;
+    height: 32px;
+  }
+  .okan-title {
+    font-size: 3.2rem;
+  }
+  .okan-legend {
+    font-size: 1.5rem;
+  }
+  .okan-text {
+    font-size: 1.5rem;
+  }
+  .okan-gallery {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .okan-symbol img {
+    height: 64px;
+  }
+}
