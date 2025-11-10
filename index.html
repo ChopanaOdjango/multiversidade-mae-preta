@@ -6,16 +6,21 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Multiversidade dos Povos da Terra de Mãe Preta</title>
   </head>
-
   <body>
     <header class="header">
-      <a href="index.html#home" class="logo">
-        <img src="./img/logo.svg" class="img-logo" alt="Logo Multiversidade" />
+      <a href="index.html#home" class="logo-text">
+        <span class="logo-title">MULTIVERSIDADE</span>
+        <span class="logo-subtitle">DOS POVOS DA TERRA DE MÃE PRETA</span>
       </a>
-
-      <i class="bx bx-menu" id="menu-icon"></i>
-
-      <nav class="navbar">
+      <button
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-controls="nav"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="navbar" id="nav">
         <a href="okan-ilu.html">OKAN ILÚ</a>
         <a href="sumauma.html">SUMAÚMA</a>
         <a href="encruzilhadas.html">ENCRUZILHADAS</a>
@@ -23,16 +28,11 @@
         <a href="contatos.html">CONTATO</a>
       </nav>
     </header>
-
     <main>
       <section id="home"></section>
     </main>
-
     <footer class="footer">
-      <!-- Faixa laranja estreita -->
       <div class="footer-bar"></div>
-
-      <!-- Faixa clara -->
       <div class="footer-top">
         <div class="footer-grid">
           <div class="footer-info">
@@ -46,7 +46,6 @@
             <p>Se preferir, preencha o formulário ao lado.</p>
             <p>Responderemos assim que possível!</p>
           </div>
-
           <form class="contact-form" action="#" method="post" novalidate>
             <div class="form-row two">
               <input type="text" name="nome" placeholder="Nome" required />
@@ -66,16 +65,13 @@
           </form>
         </div>
       </div>
-
-      <!-- Faixa azul escura -->
       <div class="footer-bottom">
         <p>
-          Copyright © 2025 Todos os direitos Reservados - Multiversidade dos
+          Copyright © 2025 Todos os direitos reservados - Multiversidade dos
           Povos da Terra de Mãe Preta
         </p>
       </div>
     </footer>
-
     <script src="./assets/js/scripts.js" defer></script>
   </body>
 </html>

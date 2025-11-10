@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Open+Sans:wght@400;600;700&display=swap");
+@font-face {
+  font-family: "Good Brush";
+  src: url("../fonts/Good-Brush.woff2") format("woff2"),
+    url("../fonts/Good-Brush.woff") format("woff"),
+    url("../fonts/Good-Brush.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +16,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -35,36 +45,67 @@ body {
   background-color: #ffffffa4;
 }
 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 1.1;
+  transition: transform 0.3s ease;
+}
+.logo-text:hover {
+  transform: scale(1.05);
+}
+
+.logo-title {
+  color: #2f3559;
+  font-weight: 900;
+  font-family: "Chelsea Market", cursive;
+  letter-spacing: 1px;
+  font-size: 2.9rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid #2f3559;
+  padding-bottom: 3px;
+}
+.logo-subtitle {
+  color: #d47618;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
 .logo {
   display: flex;
   align-items: center;
   transition: 0.3s ease;
 }
-
 .logo:hover {
   transform: scale(1.1);
 }
-
 .img-logo {
   cursor: pointer;
   transition: 0.3s ease;
   width: 80px;
   height: 60px;
 }
-
 .img-logo:hover {
   transform: scale(1.1);
 }
 
-#menu-icon {
-  font-size: 3.6rem;
+#menu-toggle {
+  font-size: 3rem;
   display: none;
   cursor: pointer;
+  background: transparent;
+  color: #2f3559;
+  line-height: 1;
+  padding: 0.2rem 0.4rem;
 }
 
 /*NAV BAR*/
 .navbar a {
-  font-size: 1.8rem;
+  font-family: "Chelsea Market", cursive;
+  font-size: 1.5rem;
   color: #2f3559;
   margin-left: 4rem;
   font-weight: 500;
@@ -82,14 +123,12 @@ body {
 }
 
 /*FOOTER */
-/* Faixa laranja estreita */
 .footer-bar {
   width: 100%;
-  height: 10px; /* altura da faixinha */
+  height: 10px;
   background-color: #d47618;
 }
 
-/* Resto do footer */
 .footer-top {
   background: #fffaf6;
   padding: 60px 18%;
@@ -180,7 +219,6 @@ body {
   transform: translateY(1px);
 }
 
-/* Faixa azul inferior */
 .footer-bottom {
   background: #2f3559;
   color: #fff;
@@ -198,5 +236,39 @@ body {
 
   .form-row.two {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Responsividade navbar básica */
+@media (max-width: 900px) {
+  .header {
+    padding: 1rem 8%;
+  }
+  #menu-toggle {
+    display: block;
+  }
+  .navbar {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: #ffffff;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 16px;
+    transition: right 0.35s ease;
+  }
+  .navbar a {
+    margin-left: 0;
+    font-size: 1.7rem;
+  }
+  .navbar.open {
+    right: 0;
+  }
+  body.menu-open {
+    overflow: hidden;
   }
 }
