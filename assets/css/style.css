@@ -103,11 +103,27 @@ body {
 }
 
 /*NAV BAR*/
+.navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar .nav-list > li {
+  position: relative;
+}
+
 .navbar a {
   font-family: "Chelsea Market", cursive;
   font-size: 1.5rem;
   color: #2f3559;
-  margin-left: 4rem;
   font-weight: 500;
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
@@ -120,6 +136,55 @@ body {
 
 .navbar a.active {
   color: #d47618;
+}
+
+.navbar .dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 21 rem;
+  background: #0f1a3a;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  padding: 4px 0;
+  list-style: none;
+  display: none;
+  z-index: 10000;
+}
+
+.navbar .dropdown li a {
+  display: block;
+  padding: 6px 12px;
+  color: #fff;
+  font-family: "Chelsea Market", cursive;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.navbar .dropdown li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.navbar .has-dropdown:hover > .dropdown {
+  display: block;
+}
+/* Dropdown ENCRUZILHADAS */
+.navbar .has-dropdown.encruzilhadas > .dropdown {
+  width: 21rem;
+  padding: 8px 0;
+}
+
+.navbar .has-dropdown.encruzilhadas > .dropdown li a {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+}
+
+/* Mostra o submenu */
+.navbar .has-dropdown:hover > .dropdown {
+  display: block;
 }
 
 /*FOOTER */
