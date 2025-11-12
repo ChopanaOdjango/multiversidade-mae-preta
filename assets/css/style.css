@@ -200,7 +200,7 @@ body {
 .footer-bar {
   width: 100%;
   height: 10px;
-  background-color: #d47618;
+  background-color: #2F3559;
 }
 
 .footer-top {
@@ -371,10 +371,10 @@ body {
 .quem-somos-image img {
   display: block;
   width: 100%;
+  max-width: clamp(220px, 34vw, 800px); 
   height: auto;
-  max-height: 530px;
-  object-fit: cover;
-  min-width: 0;
+  object-fit: contain; 
+  margin: 0 auto;
 }
 
 /* --- SEÇÃO SOBRE NÓS  --- */
@@ -484,7 +484,7 @@ body {
 }
 
 /* Lista numerada */
-.osobre-nos-text ol {
+.sobre-nos-text ol {
   padding-left: 40px;
   list-style-position: outside;
   list-style-type: decimal;
@@ -541,6 +541,141 @@ body {
   line-height: 1.7;
   text-align: left;
 }
+
+
+/*---ABRIGOS---*/
+#abrigos {
+  width: 100%;
+  background-color: #fff3ed;
+  padding: 80px 0 0;
+  overflow: hidden;
+}
+
+.abrigos-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 0 0 18%;
+}
+
+.abrigos-text h2 {
+  font-family: "Katibeh", serif;
+  text-transform: uppercase;
+  color: #d47618;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.abrigos-text p {
+  font-family: "Karma", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.8;
+  letter-spacing: 0%;
+  text-align: justify;
+  color: #2f3559;
+  margin-bottom: 20px;
+}
+
+.abrigos-text p:last-of-type {
+  margin-bottom: 32px;
+}
+
+.btn-abrigos {
+  display: inline-block;
+  background-color: #d47618;
+  color: #fff;
+  padding: 10px 25px 5px;
+  border-radius: 999px;
+  font-family: "Karma", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(212, 118, 24, 0.3);
+}
+
+.btn-abrigos:hover {
+  filter: brightness(1.1);
+  transform: scale(1.03);
+}
+
+.abrigos-image {
+  text-align: center;
+  height: 100%;
+}
+
+.abrigos-image img {
+  display: block;
+  width: 100%;
+  max-width: clamp(220px, 34vw, 800px); 
+  height: auto;
+  object-fit: contain; 
+  margin: 0 auto;
+}
+
+/* --- SEÇÃO PARCEIROS  --- */
+.parceiros {
+  background: #fffaf6;
+  color: #2f3559;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.parceiros-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.parceiros-symbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.parceiros-symbol img {
+  height: 100%;
+  width: auto;
+}
+.parceiros-title {
+  font-family: "Katibeh", serif;
+  text-transform: uppercase;
+  color: #2f3559;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  margin: 0 auto 20px auto;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.parceiros-title::after {
+  content: "";
+  display: block;
+  width: 30rem;
+  height: 6px;
+  background: #2f3559;
+  border-radius: 2px;
+}
+.parceiros-text {
+  font-family: "Karma", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 950px;
+  margin: 0 auto 20px auto;
+}
+
 
 /* --- Responsividade para Seção Sobre Nós --- */
 @media (max-width: 768px) {
@@ -609,9 +744,9 @@ body {
 
   .quem-somos-image img {
     max-width: 60%;
-    height: auto; /* Remove a altura fixa no mobile */
-    object-fit: contain; /* Mostra a imagem inteira */
-    margin: 0 auto; /* Centraliza a imagem que agora é menor */
+    height: auto; 
+    object-fit: contain; 
+    margin: 0 auto; 
   }
 
   .quem-somos-text h2 {
