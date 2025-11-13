@@ -143,4 +143,68 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
+
+  
+  const shelterCards = document.querySelectorAll(".abrigos-pag-card");
+
+  if (shelterCards.length > 0) {
+    shelterCards.forEach((card) => {
+      const images = [
+        "assets/img/abrigos/1.png",
+        "assets/img/abrigos/2.png",
+        "assets/img/abrigos/3.png",
+      ];
+
+      const imageElement = card.querySelector(".abrigos-pag-image img");
+      const leftArrow = card.querySelector(".slider-arrow.left-arrow");
+      const rightArrow = card.querySelector(".slider-arrow.right-arrow");
+      const dots = card.querySelectorAll(".slider-dots .dot");
+
+      if (!imageElement || !leftArrow || !rightArrow || dots.length === 0) {
+        console.warn("Card de abrigo mal configurado, pulando:", card);
+        return;
+      }
+
+      let currentImageIndex = 0;
+
+      function showImage(index) {
+        if (index >= images.length) {
+          index = 0;
+        } else if (index < 0) {
+          index = images.length - 1;
+        }
+
+        imageElement.src = images[index];
+
+        currentImageIndex = index;
+
+        updateDots(index);
+      }
+
+      function updateDots(activeIndex) {
+        dots.forEach((dot, index) => {
+          if (index === activeIndex) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
+          }
+        });
+      }
+
+      rightArrow.addEventListener("click", () => {
+        showImage(currentImageIndex + 1);
+      });
+
+      leftArrow.addEventListener("click", () => {
+        showImage(currentImageIndex - 1);
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showImage(index);
+        });
+      });
+      showImage(currentImageIndex);
+    });
+  }
 });

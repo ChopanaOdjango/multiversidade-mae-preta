@@ -677,14 +677,256 @@ body {
 }
 
 
+/* --- PÁGINA ABRIGOS  --- */
+.abrigos-pag {
+  background: #fffaf6;
+  color: #2f3559;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.abrigos-pag-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.abrigos-pag-title {
+  font-family: "Katibeh", serif;
+  text-transform: uppercase;
+  color: #2f3559;
+  font-size: 64px;
+  font-weight: 400;
+  align-items: center;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  margin: auto;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.abrigos-pag-title::after {
+  content: "";
+  display: block;
+  width: 22rem;
+  height: 6px;
+  background: #2f3559;
+  border-radius: 2px;
+  margin: auto;
+
+}
+.abrigos-pag-text {
+  font-family: "Karma", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 950px;
+  margin: 0 auto 20px auto;
+  align-items: center;
+  display: flex;
+}
+.abrigos-pag-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.abrigos-pag-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  background: #fffaf6;
+  border: 1.5px solid #cfcbd4;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card-content {
+  flex: 1;
+  min-width: 250px;
+  font-family: "Karma", serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center; 
+}
+.card-content-text {
+  text-align: justify; 
+  width: 100%; 
+  font-size: 1.5rem;
+  margin: 0 0 0 25%;
+}
+
+.card-content h2 {
+  font-family: "Inter", serif;
+  font-size: 3rem;
+  color: #2f3559;
+  margin-bottom: 10px;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+}
+
+.card-content .oferecido-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-content ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-bottom: 24px;
+  display: inline-block; 
+  text-align: left; 
+  font-family: "Karma", serif;
+  font-weight: 600;
+}
+
+.card-content li {
+  margin-bottom: 6px;
+  font-family: "Karma", serif;
+  font-weight: 600;
+}
+.btn-saiba-mais {
+  display: inline-block;
+  background-color: #2f3559;
+  color: #fff;
+  padding: 10px 25px 5px;
+  border-radius: 999px;
+  font-family: "Karma", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(15, 33, 78, 0.678);
+}
+
+.btn-saiba-mais:hover {
+  filter: brightness(1.1);
+  transform: scale(1.03);
+}
+
+.image-slider-container {
+  flex: 1;
+  min-width: 250px;
+  position: relative; 
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+.abrigos-pag-image {
+  width: 100%;
+  height: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.abrigos-pag-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; 
+  display: block;
+}
+
+/* Estilos das Setas */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7); 
+  color: #2f3559;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%; 
+  line-height: 1; 
+  z-index: 10; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1a1e36;
+}
+
+.slider-arrow.left-arrow {
+  left: 10px;
+}
+
+.slider-arrow.right-arrow {
+  right: 10px;
+}
+
+.arrow-icon {
+  display: block; 
+}
+
+
+/* Estilos dos Dots (indicadores de slide) */
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px; 
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.6); 
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #2f3559; 
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 768px) {
+  .abrigos-pag-card {
+    flex-direction: column; 
+  }
+
+  .card-content,
+  .image-slider-container {
+    width: 100%;
+    min-width: unset; 
+  }
+
+  /* Ajusta o padding para telas menores se necessário */
+  .abrigos-pag-card {
+    padding: 20px;
+  }
+}
+
 /* --- Responsividade para Seção Sobre Nós --- */
 @media (max-width: 768px) {
   .sobre-nos-section {
-    padding: 60px 8%; /* Ajusta o padding da seção */
+    padding: 60px 8%;
   }
 
   .sobre-nos-container {
-    padding: 0; /* Remove o padding do container, pois a seção já tem */
+    padding: 0; 
   }
 
   .sobre-nos-title {
@@ -694,8 +936,6 @@ body {
   .sobre-nos-subtitle {
     font-size: 2.8rem;
   }
-
-  /* Faz a caixa do dossiê ficar vertical */
   .dossie-box {
     flex-direction: column;
     text-align: center;
