@@ -145,15 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   
+
+
+
   const shelterCards = document.querySelectorAll(".abrigos-pag-card");
 
   if (shelterCards.length > 0) {
     shelterCards.forEach((card) => {
-      const images = [
-        "assets/img/abrigos/1.png",
-        "assets/img/abrigos/2.png",
-        "assets/img/abrigos/3.png",
-      ];
+      // --- INÍCIO DA MUDANÇA ---
+
+      // 1. Pegue a string de imagens do atributo data-images
+      const imagesJson = card.dataset.images;
+      let images = [];
+
+      // 2. Tente transformar a string em um array.
+      // Se falhar ou não existir, pule este card.
+      try {
+        images = JSON.parse(imagesJson);
+        if (!images || images.length === 0) {
+          console.warn(
+            "Card de abrigo sem 'data-images' ou array vazio, pulando:",
+            card
+          );
+          return; // 'return' aqui age como 'continue' no forEach
+        }
+      } catch (e) {
+        console.error("Erro ao ler data-images do card:", card, e);
+        return; // Pula este card
+      }
 
       const imageElement = card.querySelector(".abrigos-pag-image img");
       const leftArrow = card.querySelector(".slider-arrow.left-arrow");
