@@ -144,10 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closeMenu();
   });
 
-  
-
-
-
   const shelterCards = document.querySelectorAll(".abrigos-pag-card");
 
   if (shelterCards.length > 0) {
@@ -227,3 +223,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// ==== CARROSSEL JOVEM GALERIA ====
+(function () {
+  const galeria = document.querySelector(".jovem-galeria");
+  const slides = document.querySelectorAll(".jovem-galeria-item");
+  const btnPrev = document.querySelector(".galeria-btn.prev");
+  const btnNext = document.querySelector(".galeria-btn.next");
+
+  if (!galeria || slides.length === 0 || !btnPrev || !btnNext) return;
+
+  let current = 0;
+
+  // garante que não tenha transform sobrando da versão antiga
+  galeria.style.transform = "";
+
+  // primeiro slide visível
+  slides[current].classList.add("active");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  btnNext.addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  btnPrev.addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+})();

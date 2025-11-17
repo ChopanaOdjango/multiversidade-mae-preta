@@ -689,7 +689,6 @@ body {
   margin: 0 auto 20px auto;
 }
 
-/* Optional grid layout for many partners (keeps layout consistent on small screens) */
 .parceiros-symbol.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -697,7 +696,6 @@ body {
   align-items: center;
   justify-items: center;
 }
-
 
 /* --- PÁGINA ABRIGOS  --- */
 .abrigos-pag {
@@ -919,7 +917,6 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-
 /* --- Responsividade Parceiros --- */
 @media (max-width: 1100px) {
   .parceiros-container {
@@ -935,7 +932,7 @@ body {
   .parceiros-container {
     padding: 0 8%;
   }
- .parceiros-title {
+  .parceiros-title {
     text-align: center;
     font-size: 3.6rem;
     font-family: "Katibeh", serif;
@@ -947,7 +944,7 @@ body {
     padding-bottom: 12px;
     position: relative;
   }
-    .parceiros-title::after {
+  .parceiros-title::after {
     text-align: center;
     font-size: 3.6rem;
     font-family: "Katibeh", serif;
@@ -1011,7 +1008,7 @@ body {
     max-height: 48px;
     max-width: 84px;
   }
- .parceiros-title {
+  .parceiros-title {
     text-align: center;
     font-size: 3.6rem;
     font-family: "Katibeh", serif;
@@ -1023,7 +1020,7 @@ body {
     padding-bottom: 12px;
     position: relative;
   }
-    .parceiros-title::after {
+  .parceiros-title::after {
     text-align: center;
     font-size: 3.6rem;
     font-family: "Katibeh", serif;
@@ -1088,8 +1085,6 @@ body {
   }
 }
 
-
-
 /* --- Responsividade para Seção Sobre Nós --- */
 @media (max-width: 768px) {
   .sobre-nos-section {
@@ -1136,7 +1131,7 @@ body {
     padding-bottom: 12px;
     position: relative;
   }
-    .sobre-nos-title::after {
+  .sobre-nos-title::after {
     text-align: center;
     font-size: 3.6rem;
     font-family: "Katibeh", serif;
@@ -1179,7 +1174,6 @@ body {
     text-align: left;
   }
 }
-
 
 /* --- Responsividade para a Seção Quem Somos --- */
 @media (max-width: 1100px) {

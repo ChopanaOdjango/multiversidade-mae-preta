@@ -1,0 +1,558 @@
+.jovens-multiplicadores {
+  padding: 120px 0 80px;
+  background: #252b52;
+  color: #f5f5f5;
+  overflow: hidden;
+}
+
+/* TÍTULO */
+.jovens-multiplicadores h1 {
+  font-family: "Katibeh", serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 400;
+  color: #ff7a21;
+
+  margin: 0 auto 24px auto;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.jovens-multiplicadores h1::after {
+  content: "";
+  display: block;
+  width: 70rem;
+  height: 6px;
+  background: #ff7a21;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* TEXTOS DE PARÁGRAFO */
+.jovens-multiplicadores p {
+  font-family: "Karma", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 950px;
+  margin: 0 auto 20px auto;
+}
+
+/* GRID GERAL */
+.jovens-multiplicadores-grid {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* GRID 3 */
+.row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* GRID 2 */
+.row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* CARDS */
+.jovem-card {
+  text-align: center;
+}
+
+/* LOCAL */
+.jovem-local {
+  font-family: "Katibeh", serif;
+  font-size: 5rem;
+  color: #d47618;
+  margin-bottom: 18px;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+/* FOTO */
+.jovem-foto {
+  display: flex;
+  justify-content: center;
+}
+
+.jovem-foto img {
+  width: 260px;
+  height: 380px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.jovem-foto img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+/* NOME */
+.jovem-nome {
+  margin-top: 14px;
+  text-align: center;
+
+  display: block;
+  width: 100%;
+
+  color: #ffffff;
+  font-family: "Karma", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+.jovens-multiplicadores .jovem-nome {
+  margin-top: 15px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-family: "Karma", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  max-width: none;
+}
+/* MOBILE / TABLET */
+@media (max-width: 768px) {
+  .jovens-multiplicadores {
+    padding: 100px 16px 60px; /* entra um respiro lateral */
+  }
+
+  .jovens-multiplicadores h1 {
+    font-size: 3.6rem;
+  }
+
+  .jovens-multiplicadores h1::after {
+    width: 45%;
+  }
+
+  .jovens-multiplicadores p {
+    font-size: 1.8rem;
+  }
+
+  .row-3,
+  .row-2 {
+    grid-template-columns: 1fr; /* 1 card por linha no mobile */
+    max-width: 360px;
+  }
+
+  .jovem-local {
+    font-size: 3.8rem;
+  }
+
+  .jovem-nome {
+    font-size: 1.9rem;
+  }
+}
+/*PÁGINA JOVENS INDIVIDUAIS*/
+.jovem-page {
+  background: #fffaf6;
+  padding-top: 140px;
+  padding-bottom: 60px;
+}
+
+/* CONTAINER PRINCIPAL */
+.jovem-detalhe-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* TÍTULO */
+.jovem-detalhe-titulo {
+  font-family: "Karma", serif;
+  font-size: 52px;
+  color: #ff7a21;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* BLOCO COM FOTO E TEXTO */
+.jovem-detalhe-hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.jovem-detalhe-foto img {
+  width: 270px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.jovem-detalhe-texto p {
+  font-family: "Karma", serif;
+  font-size: 1.9rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: justify;
+  flex: 1;
+  max-width: 620px;
+}
+
+/* SUBSEÇÃO */
+.jovem-bloco {
+  margin-top: 60px;
+}
+
+.jovem-bloco h2 {
+  font-family: "Karma", serif;
+  font-size: 30px;
+  color: #26314f;
+  margin-bottom: 20px;
+  max-width: 1100px;
+  margin: 0 auto 20px auto;
+}
+
+.jovem-bloco p {
+  font-family: "Karma", serif;
+  font-size: 1.9rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 1100px;
+  margin: 0 auto 20px auto; /* centraliza o texto e dá respiro */
+}
+
+/* SPOTIFY LINK */
+.jovem-link-spotify {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.jovem-link-spotify a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #1db954;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.jovem-link-spotify a:hover {
+  opacity: 0.7;
+}
+
+.jovem-spotify-icone {
+  width: 60px;
+}
+
+/* ===================================== */
+/* GALERIA / CARROSSEL DE IMAGENS       */
+/* ===================================== */
+
+.jovem-galeria-wrapper {
+  margin-top: 40px;
+  max-width: 700px; /* largura parecida com os textos */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* área onde os slides aparecem */
+.jovem-galeria {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* cada slide fica empilhado, um sobre o outro */
+.jovem-galeria-item {
+  position: absolute;
+  inset: 0; /* top/right/bottom/left: 0 */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* slide visível */
+.jovem-galeria-item.active {
+  opacity: 1;
+  position: relative; /* faz o visível empurrar o layout pra baixo */
+}
+
+/* imagem dentro do slide */
+.jovem-galeria-item img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover leve */
+.jovem-galeria-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Botões do carrossel */
+.galeria-btn {
+  background: #d47618;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 3rem;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.galeria-btn.prev {
+  left: -70px;
+}
+
+.galeria-btn.next {
+  right: -70px;
+}
+
+/* ------------------------------------ */
+/* RESPONSIVO */
+/* ------------------------------------ */
+@media (max-width: 1024px) {
+  .row-3 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+  }
+
+  .row-2 {
+    max-width: 700px;
+  }
+
+  .jovem-detalhe-titulo {
+    font-size: 44px;
+  }
+}
+
+/* Tablets menores e celulares em modo paisagem */
+@media (max-width: 768px) {
+  .jovens-multiplicadores {
+    padding: 100px 16px 60px;
+  }
+
+  .jovens-multiplicadores h1 {
+    font-size: 3.6rem;
+  }
+
+  .jovens-multiplicadores h1::after {
+    width: 60%;
+  }
+
+  .jovens-multiplicadores p {
+    font-size: 1.8rem;
+  }
+
+  .row-3,
+  .row-2 {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+
+  .jovem-local {
+    font-size: 3.8rem;
+  }
+
+  .jovem-nome {
+    font-size: 1.9rem;
+  }
+
+  /* hero do jovem individual em coluna */
+  .jovem-detalhe-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .jovem-detalhe-titulo {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  /* carrossel ocupando a tela toda e setas mais discretas */
+  .jovem-galeria-wrapper {
+    max-width: 100%;
+  }
+
+  .galeria-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 2.2rem;
+  }
+
+  .galeria-btn.prev {
+    left: 8px;
+  }
+
+  .galeria-btn.next {
+    right: 8px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .jovem-detalhe-titulo {
+    font-size: 32px;
+  }
+
+  .jovem-bloco h2 {
+    font-size: 28px;
+  }
+
+  .jovem-link-spotify a {
+    font-size: 2rem;
+  }
+}
+.danda-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centraliza tudo no bloco */
+  gap: 24px; /* espaço entre a logo e o texto */
+  margin: 40px 0 20px;
+}
+
+.danda-logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.danda-titulo {
+  font-family: "Karma", serif;
+  font-size: 25px;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .danda-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .danda-logo {
+    max-width: 140px;
+  }
+
+  .danda-titulo {
+    font-size: 28px;
+  }
+}
+.page-back {
+  position: absolute;
+  top: 140px; /* mesma altura do título */
+  left: 17%; /* AGORA FUNCIONA → controla a distância da esquerda */
+
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+
+  color: #d47618;
+  font-size: 7rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  z-index: 50;
+}
+
+.page-back:hover {
+  color: #d47618;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1100px) {
+  .page-back {
+    left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-back {
+    width: 32px;
+    height: 32px;
+    font-size: 4rem;
+    top: 4px;
+  }
+}
+/* Tablets */
+@media (max-width: 1100px) {
+  .page-back {
+    left: 4%; /* não fica grudada */
+    top: 120px; /* acompanha o recuo do título */
+  }
+}
+
+/* Celulares */
+@media (max-width: 640px) {
+  .page-back {
+    left: 3%; /* posição perfeita pro mobile */
+    top: 100px; /* abaixo do header fixo */
+    width: 28px;
+    height: 28px;
+    font-size: 3.6rem;
+  }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 420px) {
+  .page-back {
+    left: 4%;
+    top: 95px;
+    font-size: 3.2rem;
+  }
+}
+/* parágrafo de apresentação / citação do jovem */
+.jovem-citacao {
+  font-style: italic;
+  font-weight: 600;
+  color: #2f3559; /* laranja da identidade */
+  font-size: 1.9rem;
+  line-height: 1.9;
+
+  max-width: 950px;
+  margin: 0 auto 24px auto; /* centraliza como os outros textos */
+  padding: 14px 18px;
+
+  background: rgba(255, 122, 33, 0.08); /* fundo levemente marcado */
+  border-left: 4px solid #d47618; /* “marcação” na lateral */
+}
+
+/* opcional: no mobile, um pouquinho menor */
+@media (max-width: 640px) {
+  .jovem-citacao {
+    font-size: 1.7rem;
+    padding: 12px 14px;
+  }
+}
