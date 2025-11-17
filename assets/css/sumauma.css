@@ -8,14 +8,33 @@ body{
 }
 section.imagens{
     display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 60px 0 60px 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+img.logo-samauma{
+    width: 100%;
+}
+div.h1-sumauma{
+    position: absolute;
+    top: 0;
+    margin-top: 30px;
+}
+h1.h1-sumauma{
+    font-size: 64px;
+}
+div.sumauma{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    margin-right: 400px;
 }
 .desc-samauma{
-    color: #2f3559;
-    max-width: 30%;
+    color: white;
     font-size: 2.5rem;
     text-align: justify;
 }
@@ -40,30 +59,39 @@ section.texto{
 div.acesse{
     display: flex;
     flex-direction: column;
-    width: 50%;
     margin: 0 auto;
+    width: 100%;
 }
 div h2{
     color: rgb(255, 119, 0);
     font-size: 3rem;
     text-decoration: underline;
+    text-align: justify;
 }
 div h1{
     color: rgb(255, 119, 0);
     font-size: 4rem;
     text-decoration: underline;
+    text-align: justify;
 }
 div.texto-material h2{
     display: flex;
     flex-direction: column;
-    width: 50%;
     margin: 0 auto;
     color: white;
     text-decoration: none;
+    text-align: justify;
 }
 section.cartilhas{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 50%;
     gap: 30px;
-    margin: 10px 0 10px 0;
+}
+a img.cartilha-ere{
+    width: 100%;
+}
+img.jogos{
+    width: 30%;
 }
