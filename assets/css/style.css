@@ -639,7 +639,7 @@ body {
 
 .parceiros-symbol {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
@@ -678,7 +678,6 @@ body {
   border-radius: 2px;
 }
 
-/* paragraph / descrição */
 .parceiros-text {
   font-family: "Karma", serif;
   font-weight: 600;
@@ -694,7 +693,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 18px 24px;
   align-items: center;
-  justify-items: center;
+  justify-items: left;
 }
 
 /* --- PÁGINA ABRIGOS  --- */
