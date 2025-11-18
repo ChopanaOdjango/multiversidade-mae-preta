@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.h1-sumauma{
+    font-size: 48px;
+    color: rgb(255, 119, 0);
+}
+.title{
+    position: relative;
+    margin-top: 80px;
+    padding: 1rem 18%;
+}
+.img1{
+    width: 30%;
+}
+.encruzilhadas-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+p.texto{ 
+    font-size: 15px;
+    color: #414141;
+    text-align: justify;
+}
+p#citacao{
+    font-weight: bold;
+    font-style: italic;
+}
+.section-textos{
+    padding: 1rem 18%;
+}
+.versos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+pre{
+    font-size: 15px;
+    color: #414141;
+    text-align: center;
+    font-style: italic;
+}
+h3{
+    font-weight: bold;
+    font-size: 20px;
+    color: #414141;
+}
+.subtitle{
+    padding-left: 18%;
+}
+.section-textos-imagens{
+    margin: 1rem 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.img2{
+    width: 50%;
+    height: auto;
+}
+.img3{
+    height: 400px;
+    width: auto;
+}
