@@ -1,0 +1,342 @@
+/* ================================================= */
+/* =     ESTILOS PARA A PÁGINA OKAN ILU           = */
+/* ================================================= */
+
+:root {
+  --corAzulPrincipal: #2f3559;
+  --corBrancoPrincipal: #fffaf6;
+}
+
+main {
+  padding-top: 9rem;
+}
+
+.section-okan-ilu {
+  height: 330px;
+  display: flex;
+  background-color: var(--corAzulPrincipal);
+}
+
+.section-okan-ilu #img-okan-ilu {
+  margin: 47px 20px 0px 0px;
+  padding-top: 8px;
+  width: 26rem;
+
+}
+
+.section-okan-ilu #img-okan-ilu img {
+  width: 28rem;
+  height: auto;
+}
+
+.section-okan-ilu #informacoes-okan-ilu {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  color: var(--corBrancoPrincipal);
+  text-align: justify;
+  margin: 20px 20px 0px 0px;
+}
+
+.section-okan-ilu #informacoes-okan-ilu img {
+  align-self: center;
+  margin: 30px 0px 10px 0px;
+  width: 22rem;
+  height: auto;
+}
+
+.timeline-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.timeline-wrapper h2 {
+  font-size: 3rem;
+  text-decoration: underline;
+  color: var(--corAzulPrincipal);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+
+/*Itens da Linha do Tempo */
+
+.timeline-item {
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  z-index: 2;
+}
+
+.timeline-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 8px;
+  width: calc(40% - 25px);
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+}
+
+.timeline-card h3 {
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.timeline-card p {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.timeline-card button {
+  width: 10rem;
+  height: 20px;
+  align-self: center;
+  padding: 0px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.card-dark {
+  background-color: var(--corAzulPrincipal);
+  color: var(--corBrancoPrincipal);
+}
+
+.card-dark button {
+  background-color: var(--corBrancoPrincipal);
+  color: var(--corAzulPrincipal);
+}
+
+.card-light {
+  background-color: var(--corBrancoPrincipal);
+  color: var(--corAzulPrincipal);
+  border: 1px solid var(--corAzulPrincipal);
+}
+
+.card-light button {
+  background-color: var(--corAzulPrincipal);
+  color: var(--corBrancoPrincipal);
+}
+
+
+/* Itens ÍMPARES (1, 3, 5...) - Card na Esquerda */
+.timeline-item:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+/* Itens PARES (2, 4, 6...) - Card na Direita */
+.timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.div-aranha-direita {
+  display: flex;
+  position: absolute;
+  top: 92%;
+  right: -8px;
+  transform: rotate(-10deg)
+}
+
+.div-aranha-esquerda {
+  display: flex;
+  position: absolute;
+  top: 92%;
+  left: -8px;
+  transform: rotate(10deg)
+}
+
+.div-aranha-direita img {
+  width: 2.3rem;
+  height: auto;
+}
+
+.div-aranha-esquerda img {
+  width: 2.3rem;
+  height: auto;
+}
+
+#teia-planoFundo-topo {
+  display: flex;
+  position: absolute;
+  top: 50rem;
+  right: -30rem;
+}
+
+#teia-planoFundo-baixo {
+  display: flex;
+  position: absolute;
+  bottom: -110rem;
+  left: -40rem;
+}
+
+#teia-planoFundo-topo img {
+  width: 80rem;
+  height: auto;
+  opacity: 0.1;
+}
+
+#teia-planoFundo-baixo img {
+  width: 90rem;
+  height: auto;
+  opacity: 0.1;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .section-okan-ilu {
+    height: 339px;
+  }
+
+  .section-okan-ilu #img-okan-ilu {
+    margin: 0px 20px 0px 0px;
+    width: 50rem;
+
+  }
+
+  .section-okan-ilu #img-okan-ilu img {
+    width: 34rem;
+    height: auto;
+  }
+
+  .section-okan-ilu #informacoes-okan-ilu {
+    font-size: 13px;
+    margin: 20px 25px 0px 0px;
+  }
+
+  .section-okan-ilu #informacoes-okan-ilu img {
+    align-self: center;
+    margin: 30px 0px 10px 0px;
+    width: 26rem;
+    height: auto;
+  }
+
+  .timeline-card h3 {
+    font-size: 4.5rem;
+  }
+
+  .timeline-card p {
+    font-size: 1.56rem;
+  }
+
+  .timeline-card button {
+    width: 14rem;
+    height: 20px;
+    align-self: center;
+    padding: 0px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  #teia-planoFundo-topo {
+    top: 60rem;
+    right: -20rem;
+  }
+
+  #teia-planoFundo-topo img {
+    width: 110rem;
+    height: auto;
+    opacity: 0.1;
+  }
+
+  #teia-planoFundo-baixo {
+    bottom: -150rem;
+    left: -40rem;
+  }
+
+  #teia-planoFundo-baixo img {
+    width: 110rem;
+    height: auto;
+    opacity: 0.1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-okan-ilu {
+    height: 500px;
+  }
+
+  .section-okan-ilu #img-okan-ilu {
+    margin: 0px 20px 0px 0px;
+    width: 160rem;
+
+  }
+
+  .section-okan-ilu #img-okan-ilu img {
+    width: 50rem;
+    height: auto;
+  }
+
+  .section-okan-ilu #informacoes-okan-ilu {
+    font-size: 16px;
+    margin: 20px 25px 0px 0px;
+    padding: 0px 150px 0px 150px;
+  }
+
+  .section-okan-ilu #informacoes-okan-ilu img {
+    align-self: center;
+    margin: 30px 0px 10px 0px;
+    width: 39rem;
+    height: auto;
+  }
+
+  .timeline-card {
+    width: calc(35% - 25px);
+  }
+
+  .timeline-card h3 {
+    font-size: 4.5rem;
+  }
+
+  .timeline-card p {
+    font-size: 1.8rem;
+  }
+
+  .timeline-card button {
+    width: 14rem;
+    height: 26px;
+    font-size: 1.7rem;
+  }
+
+  #teia-planoFundo-topo {
+    top: 70rem;
+    right: -70rem;
+  }
+
+  #teia-planoFundo-topo img {
+    width: 160rem;
+    height: auto;
+    opacity: 0.1;
+  }
+
+  #teia-planoFundo-baixo {
+    bottom: -200rem;
+    left: -40rem;
+  }
+
+  #teia-planoFundo-baixo img {
+    width: 150rem;
+    height: auto;
+    opacity: 0.1;
+  }
+}

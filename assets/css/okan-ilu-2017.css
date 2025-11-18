@@ -1,0 +1,151 @@
+:root {
+    --corAzulPrincipal: #2f3559;
+    --corBrancoPrincipal: #fffaf6;
+    --corLaranjaPrincipal: #D47618;
+}
+
+main {
+    padding-top: 9rem;
+}
+
+#section-okan-ilu-2017 {
+    height: 650px;
+    display: flex;
+    padding: 100px 20px 20px 20px;
+    background-color: var(--corAzulPrincipal);
+    color: var(--corBrancoPrincipal);
+}
+
+#okan-ilu-2017-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#okan-ilu-2017-titulo div {
+    display: flex;
+    gap: 30px;
+}
+
+#okan-ilu-2017-titulo span {
+    margin-top: 15px;
+    align-self: center;
+    color: var(--corLaranjaPrincipal);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#okan-ilu-2017-titulo div #okan {
+    width: 220px;
+    height: 60px;
+}
+
+
+#okan-ilu-2017-titulo div #titulo-2017 {
+    width: 135px;
+    height: 60px;
+}
+
+#okan-ilu-2017-texto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+#section-okan-ilu-2017 #div-img-esquerda {
+    width: 350px;
+    height: auto;
+}
+
+#section-okan-ilu-2017 #div-img-esquerda img {
+    width: 150px;
+    height: auto;
+    display: none;
+}
+
+#section-okan-ilu-2017 #div-img-direita {
+    width: 350px;
+    height: auto;
+}
+
+#section-okan-ilu-2017 #div-img-direita img {
+    width: 300px;
+    height: auto;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    #section-okan-ilu-2017 {
+        padding: 100px 10px 10px 30px;
+    }
+
+    #section-okan-ilu-2017 #div-img-esquerda {
+        width: 450px;
+    }
+
+    #section-okan-ilu-2017 #div-img-esquerda img {
+        width: 180px;
+        height: auto;
+        display: block;
+        margin-top: 120px;
+    }
+
+    #section-okan-ilu-2017 #div-img-direita {
+        width: 450px;
+    }
+
+    #section-okan-ilu-2017 #div-img-direita img {
+        width: 210px;
+        height: auto;
+        display: block;
+        margin: 120px 20px 0px 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #section-okan-ilu-2017 {
+        height: 700px;
+        padding: 100px 80px 10px 80px;
+    }
+
+    #okan-ilu-2017-titulo span {
+        margin-top: 16px;
+        align-self: center;
+        color: var(--corLaranjaPrincipal);
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    #okan-ilu-2017-texto {
+        margin: 20px 0px 0px 20px;
+        font-size: 16px;
+        text-align: justify;
+        font-weight: 500;
+    }
+
+    #section-okan-ilu-2017 #div-img-esquerda {
+        width: 450px;
+    }
+
+    #section-okan-ilu-2017 #div-img-esquerda img {
+        width: 260px;
+        height: auto;
+        display: block;
+        margin: 120px 0px 0px 20px;
+    }
+
+    #section-okan-ilu-2017 #div-img-direita {
+        width: 450px;
+    }
+
+    #section-okan-ilu-2017 #div-img-direita img {
+        width: 290px;
+        height: auto;
+        display: block;
+        margin: 120px 0px 0px 40px;
+    }
+}
