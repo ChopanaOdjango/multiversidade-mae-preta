@@ -727,7 +727,7 @@ body {
 .abrigos-pag-title::after {
   content: "";
   display: block;
-  width: 22rem;
+  width: 65rem;
   height: 6px;
   background: #2f3559;
   border-radius: 2px;
@@ -795,7 +795,7 @@ body {
 .card-content .oferecido-title {
   font-weight: 600;
   margin-bottom: 10px;
-    font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 .card-content ul {
@@ -806,7 +806,7 @@ body {
   text-align: left;
   font-family: "Karma", serif;
   font-weight: 600;
-    font-size: 1.7rem;
+  font-size: 1.7rem;
 }
 
 .card-content li {

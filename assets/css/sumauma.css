@@ -1,97 +1,192 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-#header-samauma{
+#header-samauma {
+  position: relative;
+}
+section.imagens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+img.logo-samauma {
+  width: 100%;
+}
+div.h1-sumauma {
+  position: absolute;
+  top: 0;
+  margin-top: 30px;
+}
+h1.h1-sumauma {
+  font-size: 64px;
+}
+div.sumauma {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin-right: 400px;
+}
+.desc-samauma {
+  color: white;
+  font-size: 2.5rem;
+  text-align: justify;
+}
+article {
+  background-color: #2f3559;
+}
+.explicacao-samauma {
+  color: white;
+  font-size: 2.5rem;
+  text-align: justify;
+}
+section.texto {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
+  font-size: 2.5rem;
+  text-align: justify;
+}
+div.acesse {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+div h2 {
+  color: rgb(255, 119, 0);
+  font-size: 3rem;
+  text-decoration: underline;
+  text-align: justify;
+}
+div h1 {
+  color: rgb(255, 119, 0);
+  font-size: 4rem;
+  text-decoration: underline;
+  text-align: justify;
+}
+div.texto-material h2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: white;
+  text-decoration: none;
+  text-align: justify;
+}
+section.cartilhas {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 50%;
+  gap: 30px;
+}
+a img.cartilha-ere {
+  width: 100%;
+}
+img.jogos {
+  width: 30%;
+}
+.jogos-cartilhas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.jogos-cartilhas img.jogos {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+/* ===========================
+   MOBILE — abaixo de 768px
+=========================== */
+
+@media (max-width: 768px) {
+  /* NÃO esconda mais o bloco todo, só as imagens */
+  section.imagens {
+    display: block !important;
     position: relative;
-}
-section.imagens{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-img.logo-samauma{
-    width: 100%;
-}
-div.h1-sumauma{
-    position: absolute;
-    top: 0;
-    margin-top: 30px;
-}
-h1.h1-sumauma{
-    font-size: 64px;
-}
-div.sumauma{
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    margin-right: 400px;
-}
-.desc-samauma{
-    color: white;
-    font-size: 2.5rem;
-    text-align: justify;
-}
-article{
+    background-color: #2f3559; /* mantém o fundo azul */
+    padding-top: 80px;
+  }
+
+  /* esconde todas as imagens do banner no mobile */
+  section.imagens img {
+    display: none !important;
+  }
+
+  /* esconde o texto que ficava por cima da imagem */
+  div.sumauma {
+    display: none !important;
+  }
+
+  /* MOSTRA o h1 como bloco normal, acima do texto */
+  div.h1-sumauma {
+    display: block !important;
+    position: relative !important;
+    margin: 0 auto 10px !important;
+    padding: 0 16px;
+    text-align: center !important;
+    z-index: 10;
+  }
+
+  h1.h1-sumauma {
+    font-size: 34px;
+    color: rgb(255, 119, 0);
+    text-align: center;
+    margin: 0 auto 12px;
+    line-height: 1.1;
+  }
+
+  /* texto do artigo */
+  article {
     background-color: #2f3559;
-}
-.explicacao-samauma{
-    color: white;
-    font-size: 2.5rem;
+  }
+
+  section.texto {
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px 0 32px;
+    font-size: 1.6rem;
+    color: #ffffff;
     text-align: justify;
-}
-section.texto{
-    display: flex;
+  }
+
+  .desc-samauma,
+  .explicacao-samauma {
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-align: justify;
+  }
+
+  /* cartilhas e jogos já empilhados no mobile */
+  section.cartilhas {
     flex-direction: column;
-    gap: 30px;
-    width: 50%;
-    margin: 0 auto;
-    padding: 30px 0 30px 0;
-    font-size: 2.5rem;
-    text-align: justify;
-}
-div.acesse{
-    display: flex;
+    width: 90%;
+    gap: 20px;
+  }
+
+  .jogos-cartilhas {
     flex-direction: column;
-    margin: 0 auto;
-    width: 100%;
-}
-div h2{
-    color: rgb(255, 119, 0);
-    font-size: 3rem;
-    text-decoration: underline;
-    text-align: justify;
-}
-div h1{
-    color: rgb(255, 119, 0);
-    font-size: 4rem;
-    text-decoration: underline;
-    text-align: justify;
-}
-div.texto-material h2{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    color: white;
-    text-decoration: none;
-    text-align: justify;
-}
-section.cartilhas{
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 50%;
-    gap: 30px;
-}
-a img.cartilha-ere{
-    width: 100%;
-}
-img.jogos{
-    width: 30%;
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .jogos-cartilhas img.jogos {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+  }
 }

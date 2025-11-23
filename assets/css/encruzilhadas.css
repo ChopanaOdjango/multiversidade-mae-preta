@@ -1,10 +1,9 @@
 .jovens-multiplicadores {
   padding: 120px 0 80px;
-  background: #252b52;
-  color: #f5f5f5;
+  background: #fffaf6;
+  color: #2f3559;
   overflow: hidden;
 }
-
 /* TÍTULO */
 .jovens-multiplicadores h1 {
   font-family: "Katibeh", serif;
@@ -109,7 +108,7 @@
   display: block;
   width: 100%;
 
-  color: #ffffff;
+  color: #2f3559;
   font-family: "Karma", serif;
   font-size: 2.2rem;
   font-weight: 700;
@@ -121,7 +120,7 @@
   text-align: center;
   display: block;
   width: 100%;
-  color: #fff;
+  color: #2f3559;
   font-family: "Karma", serif;
   font-weight: 700;
   font-size: 2rem;
@@ -130,7 +129,7 @@
 /* MOBILE / TABLET */
 @media (max-width: 768px) {
   .jovens-multiplicadores {
-    padding: 100px 16px 60px; /* entra um respiro lateral */
+    padding: 100px 16px 60px;
   }
 
   .jovens-multiplicadores h1 {
@@ -147,7 +146,7 @@
 
   .row-3,
   .row-2 {
-    grid-template-columns: 1fr; /* 1 card por linha no mobile */
+    grid-template-columns: 1fr;
     max-width: 360px;
   }
 
@@ -159,14 +158,13 @@
     font-size: 1.9rem;
   }
 }
-/*PÁGINA JOVENS INDIVIDUAIS*/
+
 .jovem-page {
   background: #fffaf6;
   padding-top: 140px;
   padding-bottom: 60px;
 }
 
-/* CONTAINER PRINCIPAL */
 .jovem-detalhe-container {
   max-width: 1100px;
   margin: 0 auto;

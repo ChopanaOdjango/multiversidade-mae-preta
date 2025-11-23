@@ -1,0 +1,255 @@
+/* RESET BÁSICO (pode manter junto com o style.css sem problema) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BASE DA PÁGINA / MAIN
+========================================================= */
+
+body {
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: #fffaf6;
+  color: #2f3559;
+  line-height: 1.7;
+}
+
+/* main desta página */
+#encruzilhadas-multiversidade {
+  background: #fffaf6;
+  padding: 60px 0 70px;
+}
+
+/* container padrão das seções do main */
+.encruz-programa-container,
+.encruz-teia {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+/* =========================================================
+   BLOCO – ENCRUZILHADAS DA MULTIVERSIDADE (TEXTO)
+========================================================= */
+
+.encruz-programa {
+  margin-top: 20px;
+}
+
+/* TÍTULO PRINCIPAL – mesmo padrão dos outros (Katibeh + faixa) */
+.encruz-programa-title {
+  font-family: "Katibeh", serif;
+  font-size: 64px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #ff7a21;
+  text-align: left;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* faixa laranja embaixo do título */
+.encruz-programa-title::after {
+  content: "";
+  display: block;
+  width: 32rem;
+  max-width: 90%;
+  height: 6px;
+  background: #ff7a21;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+/* texto corrido da introdução */
+.encruz-programa-texto p {
+  font-size: 16px;
+  color: #2f3559;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  margin-bottom: 16px;
+}
+
+/* =========================================================
+   SEÇÃO – TEIA ORGANIZATIVA
+========================================================= */
+
+.encruz-teia {
+  margin-top: 60px;
+}
+
+/* título da teia */
+.encruz-teia-title {
+  font-family: "Katibeh", serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #2f3559;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+/* grid com 2 colunas (esquerda / direita) */
+.encruz-teia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 32px;
+}
+
+/* cada coluna da teia */
+.encruz-teia-col {
+  text-align: center;
+}
+
+/* blocos internos (Conselho, Ekogestão, etc.) */
+.encruz-teia-bloco + .encruz-teia-bloco {
+  margin-top: 24px;
+}
+
+.encruz-teia-bloco h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* tira os bullets feios e organiza as linhas */
+.encruz-teia-bloco ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.encruz-teia-bloco li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+/* ===== CONTAINER GERAL DO TÍTULO ===== */
+.encruz-programa-texto {
+  max-width: 900px; /* largura ideal */
+  margin: 0 auto; /* CENTRALIZA TODO O BLOCO */
+  text-align: center; /* garante que o título fique centralizado */
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+.encruz-programa-title {
+  font-family: "Katibeh", serif;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: #ff7a21;
+  font-weight: 400;
+
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
+}
+
+.encruz-programa-title {
+  font-family: "Katibeh", serif;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: #ff7a21;
+  font-weight: 400;
+
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-align: center;
+
+  white-space: nowrap; /* 🔥 NÃO DEIXA QUEBRAR LINHA */
+  display: inline-block; /* mantém o título centralizado */
+}
+
+/* LINHA LARANJA */
+.encruz-programa-title::after {
+  content: "";
+  display: block;
+  width: 820px;
+  max-width: 100%;
+  height: 6px;
+  background: #ff7a21;
+  border-radius: 3px;
+  margin: 12px auto 0 auto;
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+/* tablets / telas médias */
+@media (max-width: 1024px) {
+  #encruzilhadas-multiversidade {
+    padding-top: 50px;
+  }
+
+  .encruz-programa-title {
+    font-size: 52px;
+  }
+
+  .encruz-programa-title::after {
+    width: 26rem;
+  }
+
+  .encruz-teia-grid {
+    column-gap: 24px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  #encruzilhadas-multiversidade {
+    padding-top: 40px;
+  }
+
+  .encruz-programa-container,
+  .encruz-teia {
+    padding: 0 6%;
+  }
+
+  .encruz-programa-title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .encruz-programa-title::after {
+    margin-left: auto;
+    margin-right: auto;
+    width: 18rem;
+    height: 4px;
+  }
+
+  .encruz-programa-texto p {
+    font-size: 15px;
+  }
+
+  .encruz-teia-title {
+    font-size: 24px;
+  }
+
+  /* teia empilhada – 1 coluna só */
+  .encruz-teia-grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+
+/* telas bem pequenas */
+@media (max-width: 480px) {
+  .encruz-programa-title {
+    font-size: 34px;
+  }
+
+  .encruz-programa-title::after {
+    width: 14rem;
+  }
+
+  .encruz-programa-texto p {
+    font-size: 14px;
+  }
+}

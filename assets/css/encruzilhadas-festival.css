@@ -1,72 +1,192 @@
-body{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-.h1-encruzilhadas{
-    font-size: 48px;
-    color: rgb(255, 119, 0);
+.h1-encruzilhadas {
+  font-size: 48px;
+  text-align: center;
+  color: rgb(255, 119, 0);
+  position: relative;
 }
-.title{
-    position: relative;
-    margin-top: 80px;
-    padding: 1rem 18%;
+.h1-encruzilhadas::after {
+  content: "";
+  display: block;
+  width: 88rem;
+  height: 6px;
+  background: #ff7700;
+  border-radius: 3px;
+  margin: 10px auto 0;
 }
-.img1{
-    width: 30%;
+.title {
+  position: relative;
+  margin-top: 80px;
+  padding: 1rem 18%;
 }
-.encruzilhadas-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
+.img1 {
+  width: 30%;
 }
-p.texto{ 
-    font-size: 15px;
-    color: #414141;
-    text-align: justify;
+.encruzilhadas-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
-p#citacao{
-    font-weight: bold;
-    font-style: italic;
+p.texto {
+  font-size: 15px;
+  color: #414141;
+  text-align: justify;
 }
-.section-textos{
-    padding: 1rem 18%;
+p#citacao {
+  font-weight: bold;
+  font-style: italic;
 }
-.versos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
+.section-textos {
+  padding: 1rem 18%;
 }
-pre{
-    font-size: 15px;
-    color: #414141;
+.versos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+pre {
+  font-size: 15px;
+  color: #414141;
+  text-align: center;
+  font-style: italic;
+
+  display: block;
+  margin: 0 auto;
+  white-space: pre-line; /* mantém as quebras de linha, MAS ignora os espaços extras */
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #414141;
+}
+.subtitle {
+  padding-left: 18%;
+}
+.section-textos-imagens {
+  margin: 1rem 18%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.img2 {
+  width: 50%;
+  height: auto;
+}
+.img3 {
+  height: 400px;
+  width: auto;
+}
+
+/*MOBILEEEE*/
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    display: block;
+    gap: 0;
+  }
+
+  /* TÍTULO */
+  .title {
+    margin-top: 96px;
+    padding: 0 1.25rem;
     text-align: center;
-    font-style: italic;
-}
-h3{
-    font-weight: bold;
-    font-size: 20px;
-    color: #414141;
-}
-.subtitle{
-    padding-left: 18%;
-}
-.section-textos-imagens{
-    margin: 1rem 18%;
+  }
+
+  .h1-encruzilhadas {
+    font-size: 28px;
+  }
+
+  .h1-encruzilhadas::after {
+    display: none; /* some com a listra no mobile */
+  }
+
+  /* BLOCO FOTO + CITAÇÃO INICIAL */
+  .encruzilhadas-section {
+    padding: 0 1.25rem;
+    gap: 16px;
+  }
+
+  .img1 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* TEXTOS GERAIS */
+  .section-textos,
+  .subtitle,
+  .versos,
+  .section-textos-imagens {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section-textos {
+    margin-top: 16px;
+  }
+
+  p.texto,
+  pre {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .subtitle h3 {
+    font-size: 18px;
+  }
+
+  /* CITAÇÕES – CENTRALIZADAS E LARGURA CHEIA */
+  .versos {
+    display: block; /* tira o flex que atrapalha */
+    max-width: 100%;
+    text-align: center;
+    margin: 24px auto;
+  }
+
+  .versos pre {
+    display: block;
+    width: 100%; /* ocupa a largura toda do container */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* BLOCOS IMG + TEXTO EMPILHADOS E CENTRALIZADOS */
+  .section-textos-imagens {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-.img2{
-    width: 50%;
+    flex-direction: column;
+    align-items: stretch; /* cada filho ocupa 100% da largura */
+    gap: 16px;
+  }
+
+  .section-textos-imagens .versos {
+    align-self: stretch; /* garante centralização mesmo dentro do flex */
+  }
+
+  .img2,
+  .img3 {
+    width: 100%;
+    max-width: 100%;
     height: auto;
-}
-.img3{
-    height: 400px;
-    width: auto;
+  }
+
+  .img3 {
+    height: auto;
+  }
 }

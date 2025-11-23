@@ -1,0 +1,368 @@
+/* ===========================
+   TECENDO A ESPERANÇA
+   =========================== */
+
+#tecendo-esperanca {
+  background-color: #ffffff;
+  font-family: "Karma", serif;
+}
+
+/* Container geral (mesma lógica das outras páginas) */
+.esperanca-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+.esperanca-hero {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.esperanca-title {
+  text-align: left;
+  color: #ff7a21;
+  font-size: 4.6rem;
+  line-height: 1.1;
+  margin: 0 0 24px;
+}
+
+.esperanca-text {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  font-size: 1.9rem;
+  line-height: 1.9;
+  color: #333333;
+  margin: 0 0 18px;
+}
+
+.esperanca-text strong {
+  font-weight: 700;
+}
+
+/* Destaques em laranja (perguntas, frases) */
+.esperanca-text-destaque {
+  color: #ff7a21;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* ---------- SEÇÕES PADRÃO ---------- */
+
+.esperanca-section {
+  padding: 40px 0;
+}
+
+.esperanca-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.esperanca-col {
+  min-width: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.esperanca-galeria-simbolos {
+  text-align: center;
+}
+
+.simbolos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.simbolos-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.esperanca-figure {
+  margin: 0;
+}
+
+.esperanca-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.esperanca-colagem-grande .esperanca-figure img {
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  min-height: 160px;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* Botões do carrossel */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(47, 53, 89, 0.85);
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  z-index: 2;
+}
+
+.carousel-control.prev {
+  left: -18px;
+}
+
+.carousel-control.next {
+  right: -18px;
+}
+
+.carousel-control:hover {
+  transform: translateY(-50%) scale(1.03);
+}
+
+/* ---------- BLOCO SPOTIFY ---------- */
+
+.esperanca-spotify {
+  padding-bottom: 70px;
+}
+
+.spotify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #2f3559;
+  font-weight: 600;
+}
+
+.spotify-link:hover span {
+  text-decoration: underline;
+}
+
+.spotify-logo {
+  width: 58px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+
+/* Tablets / notebooks menores */
+@media (max-width: 1024px) {
+  .esperanca-container {
+    padding: 0 8%;
+  }
+
+  .esperanca-title {
+    font-size: 3.8rem;
+    text-align: center;
+  }
+
+  .esperanca-hero .esperanca-text {
+    text-align: justify;
+  }
+
+  .esperanca-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .esperanca-video .esperanca-col:first-child {
+    order: 1;
+  }
+
+  .esperanca-video .esperanca-col:last-child {
+    order: 2;
+  }
+
+  .esperanca-figure img {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+}
+
+/* Celular */
+@media (max-width: 640px) {
+  .esperanca-hero {
+    padding-top: 100px;
+  }
+
+  .esperanca-container {
+    padding: 0 6%;
+  }
+
+  .esperanca-title {
+    font-size: 3.2rem;
+    text-align: left;
+  }
+
+  .esperanca-text,
+  .esperanca-text-destaque {
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+
+  .simbolos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-control.prev {
+    left: 4px;
+  }
+
+  .carousel-control.next {
+    right: 4px;
+  }
+
+  .spotify-link {
+    font-size: 1.7rem;
+  }
+
+  .spotify-logo {
+    width: 48px;
+  }
+}
+
+/* ============================= */
+/* CENTRALIZAÇÃO DOS ELEMENTOS  */
+/* ============================= */
+
+/* 1. Título principal */
+.esperanca-title {
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  margin: 40px auto 20px !important;
+}
+
+/* 2. Perguntas iniciais (texto laranja) */
+.esperanca-perguntas .esperanca-text-destaque {
+  text-align: center !important;
+  margin: 0 auto 25px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* 3. Texto laranja abaixo da colagem “Que símbolos representam...” */
+.esperanca-galeria-simbolos .esperanca-text-destaque {
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  margin: 20px auto !important;
+}
+
+/* 4. Centralizar o bloco do Spotify */
+.esperanca-spotify .esperanca-text {
+  text-align: center !important;
+}
+
+.spotify-link {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin: 20px auto 0 !important;
+  width: fit-content !important;
+  text-decoration: none !important;
+}
+
+/* Deixa a logo do Spotify alinhada certinho */
+.spotify-logo {
+  width: 70px !important;
+  height: 70px !important;
+}
+#tecendo-esperanca {
+  background: #fffaf6;
+  color: #2f3559;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+#tecendo-esperanca .esperanca-title {
+  font-family: "Katibeh", serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 400;
+  color: #ff7a21;
+
+  margin: 0 auto 24px auto;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+#tecendo-esperanca .esperanca-title::after {
+  content: "";
+  display: block;
+  width: 63rem;
+  height: 6px;
+  background: #ff7a21;
+  border-radius: 2px;
+  margin: 0 auto;
+}

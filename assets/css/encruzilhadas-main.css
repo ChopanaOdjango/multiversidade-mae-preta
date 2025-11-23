@@ -1,0 +1,287 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: #fffaf6;
+  color: #2f3559;
+  line-height: 1.7;
+}
+
+/* MAIN WRAPPER */
+
+.encruzilhadas-home {
+  min-height: 100vh;
+  background: #fffaf6;
+}
+
+/* CONTAINER PADRÃO */
+
+.encruzilhadas-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+/* ==============================
+   LOGO TOPO
+============================== */
+
+.encruzilhadas-header {
+  padding: 24px 0 8px;
+  text-align: left;
+}
+
+.encruzilhadas-logo-top {
+  max-width: 165px;
+  height: auto;
+  display: block;
+}
+
+/* ==============================
+   TÍTULO + TEXTO
+============================== */
+
+.encruzilhadas-hero {
+  padding: 40px 0 40px;
+}
+
+/* TÍTULO no mesmo estilo do padrão que você mandou */
+.encruzilhadas-title {
+  font-family: "Katibeh", serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 400;
+  color: #ff7a21;
+
+  margin: 0 auto 24px auto;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.encruzilhadas-title::after {
+  content: "";
+  display: block;
+  width: 45rem;
+  max-width: 90%;
+  height: 6px;
+  background: #ff7a21;
+  border-radius: 2px;
+  margin: 0.25rem auto 0;
+}
+
+/* Texto introdutório */
+
+.encruzilhadas-text {
+  font-size: 2.3rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   BLOCO "CONFIRA" + BOTÕES
+============================== */
+
+.encruzilhadas-links {
+  position: relative;
+  padding: 40px 0 220px; /* espaço para os personagens nas laterais */
+}
+
+/* subtítulo "Confira" */
+
+.encruzilhadas-subtitle {
+  font-size: 40px;
+  color: #ff7a21;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* linhas de botões */
+
+.encruzilhadas-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+/* estilo dos botões */
+
+.btn-encruzilhadas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+
+  background: #ff7a21;
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn-encruzilhadas:hover {
+  background: #e56b1d;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
+}
+
+.btn-encruzilhadas:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   ILUSTRAÇÕES LATERAIS
+============================== */
+
+.encruzilhadas-figure {
+  position: absolute;
+  bottom: 0;
+  width: 260px;
+  height: auto;
+  pointer-events: none;
+}
+
+.encruzilhadas-figure-left {
+  left: 0;
+  transform: translateX(-10%);
+}
+
+.encruzilhadas-figure-right {
+  right: 0;
+  transform: translateX(10%);
+}
+#div-img-esquerda img,
+#div-img-direita img {
+  display: block;
+  width: 260px;
+  height: auto;
+  position: absolute;
+  bottom: -8px;
+  z-index: 1;
+}
+
+#div-img-esquerda img {
+  left: 6%;
+}
+
+#div-img-direita img {
+  right: 6%;
+}
+/* ===== LAYOUT DO TÍTULO + LOGO + TEXTO ===== */
+
+/* transforma o container da seção em GRID (título em cima, logo + texto embaixo) */
+.encruzilhadas-hero .encruzilhadas-container {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr); /* coluna 1: logo / coluna 2: texto */
+  grid-template-rows: auto auto;
+  column-gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* título ocupa a largura toda (2 colunas) */
+.encruzilhadas-title {
+  grid-column: 1 / -1;
+  margin: 0 auto 24px auto;
+}
+
+/* logo na coluna da esquerda */
+.encruz-logo {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 260px;
+  height: auto;
+  justify-self: center;
+  margin-top: 16px;
+}
+
+/* texto na coluna da direita */
+.encruzilhadas-text {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 16px;
+}
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 900px) {
+  /* volta tudo para coluna única */
+  .encruzilhadas-hero .encruzilhadas-container {
+    display: block;
+  }
+
+  .encruz-logo {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .encruzilhadas-text {
+    margin-top: 20px;
+  }
+
+  .encruzilhadas-title {
+    font-size: 42px;
+  }
+
+  .encruzilhadas-title::after {
+    width: 28rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .encruzilhadas-title {
+    font-size: 32px;
+  }
+
+  .encruzilhadas-title::after {
+    width: 18rem;
+  }
+
+  .btn-encruzilhadas {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+/* ==============================
+   MOBILE – ESCONDER ILUSTRAÇÕES
+============================== */
+@media (max-width: 768px) {
+  .encruzilhadas-figure,
+  .encruzilhadas-figure-left,
+  .encruzilhadas-figure-right {
+    display: none;
+  }
+
+  /* ajusta o espaço da seção de links,
+     já que não precisamos mais reservar área pras imagens */
+  .encruzilhadas-links {
+    padding-bottom: 40px;
+  }
+}
