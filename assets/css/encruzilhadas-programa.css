@@ -162,15 +162,15 @@ body {
   line-height: 1.2;
   text-align: center;
 
-  white-space: nowrap; /* 🔥 NÃO DEIXA QUEBRAR LINHA */
-  display: inline-block; /* mantém o título centralizado */
+  white-space: nowrap;
+  display: inline-block;
 }
 
 /* LINHA LARANJA */
 .encruz-programa-title::after {
   content: "";
   display: block;
-  width: 820px;
+  width: 350px;
   max-width: 100%;
   height: 6px;
   background: #ff7a21;
