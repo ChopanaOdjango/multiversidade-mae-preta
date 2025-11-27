@@ -956,6 +956,7 @@ body {
     line-height: 1.2;
     width: 45%;
     margin: auto;
+    height: 3px;
   }
   .parceiros-symbol,
   .parceiros-symbol.grid {
@@ -1143,6 +1144,7 @@ body {
     line-height: 1.2;
     width: 45%;
     margin: auto;
+    height: 3px;
   }
   .sobre-nos-text {
     text-align: left;

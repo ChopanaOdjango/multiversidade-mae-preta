@@ -49,12 +49,26 @@ main {
 }
 
 .timeline-wrapper h2 {
-  font-size: 3rem;
-  text-decoration: underline;
-  color: var(--corAzulPrincipal);
-  margin-bottom: 40px;
+  font-family: "Katibeh", serif;
   text-transform: uppercase;
-  font-weight: 600;
+  color: #2f3559;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  margin: 0 auto 20px auto;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.timeline-wrapper h2::after {
+  content: "";
+  display: block;
+  width: 35%;
+  height: 6px;
+  background: #2f3559;
+  border-radius: 2px;
+  margin: auto;
 }
 
 .timeline {
@@ -71,44 +85,43 @@ main {
   position: relative;
   margin-bottom: 30px;
   width: 100%;
-  z-index: 2;
+  padding-left: 45px; /* Espaço para a linha na esquerda */
+  box-sizing: border-box; /* Garante que o padding não estoure a tela */
 }
 
 .timeline-card {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
-  width: calc(40% - 25px);
+  width: 100%; /* Largura total no celular */
   box-sizing: border-box;
   text-align: left;
   position: relative;
+  z-index: 10;
 }
 
 .timeline-card h3 {
-  font-size: 4rem;
+  font-size: 3rem; /* Um pouco menor no celular para não quebrar */
   margin-top: 0;
   margin-bottom: 10px;
 }
-
 .timeline-card p {
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.4;
   margin-bottom: 15px;
 }
-
 .timeline-card button {
-  width: 10rem;
-  height: 20px;
+  width: 100%; /* Botão full width no celular fica melhor */
+  max-width: 10rem;
+  height: 30px; /* Um pouco mais alto para toque */
   align-self: center;
-  padding: 0px 16px;
   border-radius: 7px;
   cursor: pointer;
   font-weight: bold;
   font-size: 0.9rem;
 }
-
 .card-dark {
   background-color: var(--corAzulPrincipal);
   color: var(--corBrancoPrincipal);
@@ -122,7 +135,7 @@ main {
 .card-light {
   background-color: var(--corBrancoPrincipal);
   color: var(--corAzulPrincipal);
-  border: 1px solid var(--corAzulPrincipal);
+  border: 2px solid var(--corAzulPrincipal);
 }
 
 .card-light button {
@@ -192,77 +205,122 @@ main {
   opacity: 0.1;
 }
 
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px; /* Linha fixa na esquerda */
+  top: 0; 
+  bottom: 0;
+  width: 2px;
+  background-color: var(--corAzulPrincipal);
+  z-index: 0;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 15px; /* Começa na linha vertical */
+  top: 45px; /* Altura do ano */
+  width: 30px; /* Bracinho curto fixo */
+  height: 2px;
+  background-color: var(--corAzulPrincipal);
+  z-index: 1;
+}
+
+.timeline-card {
+  z-index: 10;
+  position: relative; 
+}
+
+/* Configuração para cards na ESQUERDA (Ímpares) */
+.timeline-item:nth-child(odd)::after {
+  right: 50%; /* Sai do centro para a esquerda */
+}
+
+/* Configuração para cards na DIREITA (Pares) */
+.timeline-item:nth-child(even)::after {
+  left: 50%; /* Sai do centro para a direita */
+}
+
+/* --- TABLET E DESKTOP (ZIG-ZAG) --- */
+/* --- TABLET E DESKTOP (ZIG-ZAG) --- */
 @media screen and (min-width: 768px) {
-  .section-okan-ilu {
-    height: 339px;
+  
+  /* Retorna a linha para o MEIO */
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* CORREÇÃO AQUI: Mudamos de 50px para 45px para bater exato com o braço */
+    /* Se quiser que a linha suba mais, pode colocar 0 */
+    top: 45px; 
   }
 
-  .section-okan-ilu #img-okan-ilu {
-    margin: 0px 20px 0px 0px;
-    width: 50rem;
+  /* Remove o padding lateral do item pois agora é centralizado */
+  .timeline-item {
+    padding-left: 0;
   }
 
-  .section-okan-ilu #img-okan-ilu img {
-    width: 34rem;
-    height: auto;
-    display: block;
-  }
-
-  .section-okan-ilu #informacoes-okan-ilu {
-    font-size: 13px;
-    margin: 20px 25px 0px 0px;
-  }
-
-  .section-okan-ilu #informacoes-okan-ilu img {
-    align-self: center;
-    margin: 30px 0px 10px 0px;
-    width: 26rem;
-    height: auto;
+  /* Define o tamanho do card para caber lado a lado */
+  .timeline-card {
+    width: calc(40% - 25px);
   }
 
   .timeline-card h3 {
     font-size: 4.5rem;
   }
 
-  .timeline-card p {
-    font-size: 1.56rem;
+
+  /* LÓGICA DO ZIG-ZAG */
+  
+  /* ÍMPARES (Esquerda) */
+  .timeline-item:nth-child(odd) {
+    justify-content: flex-start;
+  }
+  .timeline-item:nth-child(odd)::after {
+    left: auto; 
+    right: 50%; 
+    width: calc(10% + 80px); 
   }
 
-  .timeline-card button {
-    width: 14rem;
-    height: 20px;
-    align-self: center;
-    padding: 0px 16px;
-    border-radius: 7px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.3rem;
+  /* PARES (Direita) */
+  .timeline-item:nth-child(even) {
+    justify-content: flex-end;
   }
-
-  #teia-planoFundo-topo {
-    top: 60rem;
-    right: -20rem;
+  .timeline-item:nth-child(even)::after {
+    left: 50%; 
+    width: calc(10% + 80px);
   }
-
-  #teia-planoFundo-topo img {
-    width: 110rem;
-    height: auto;
-    opacity: 0.1;
+  
+  /* Ajustes gerais de layout */
+  .section-okan-ilu {
+    height: 339px;
   }
-
-  #teia-planoFundo-baixo {
-    bottom: -150rem;
-    left: -40rem;
+  .section-okan-ilu #img-okan-ilu {
+    margin: 0px 20px 0px 0px;
+    width: 50rem;
   }
-
-  #teia-planoFundo-baixo img {
-    width: 110rem;
-    height: auto;
-    opacity: 0.1;
+  .section-okan-ilu #img-okan-ilu img {
+    display: block;
+    width: 34rem;
   }
+  
+  /* Aranhas e Teias */
+  #teia-planoFundo-topo { top: 60rem; right: -20rem; }
+  #teia-planoFundo-baixo { bottom: -150rem; left: -40rem; }
 }
 
 @media screen and (min-width: 1200px) {
+
+.timeline-item:nth-child(odd)::after,
+  .timeline-item:nth-child(even)::after {
+    width: calc(15% + 80px);
+  }
+
+  .timeline-card {
+    width: calc(35% - 25px);
+  }
+  
   .section-okan-ilu {
     height: 500px;
   }
