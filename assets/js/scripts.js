@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Card de abrigo sem 'data-images' ou array vazio, pulando:",
             card
           );
-          return; 
+          return;
         }
       } catch (e) {
         console.error("Erro ao ler data-images do card:", card, e);
@@ -251,3 +251,86 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(current);
   });
 })();
+
+(function () {
+  // Sua chave pública do EmailJS
+  emailjs.init("Pt84E7scw0M9hXws8");
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const form = event.target;
+
+      // 1. Validação dos campos normais
+      if (!form.checkValidity()) {
+        Swal.fire({
+          title: "Erro!",
+          text: "Por favor, preencha todos os campos obrigatórios.",
+          icon: "error",
+          width: "450px",
+          padding: "3em",
+          customClass: { popup: "swal2-popup-custom" },
+        });
+        return;
+      }
+
+      // 2. NOVA VALIDAÇÃO DO RECAPTCHA
+      // Verifica se o usuário marcou a caixinha
+      const recaptchaResponse = grecaptcha.getResponse();
+      
+      if (recaptchaResponse.length === 0) {
+        Swal.fire({
+          title: "Atenção!",
+          text: "Por favor, confirme que você não é um robô.",
+          icon: "warning",
+          width: "450px",
+          padding: "3em",
+          customClass: { popup: "swal2-popup-custom" },
+        });
+        return; // Para o código aqui e não envia
+      }
+
+      const serviceID = "service_9o2xdcr";
+      const templateID = "template_6vk5krp";
+
+      // O sendForm envia automaticamente o token do recaptcha junto com os dados
+      emailjs
+        .sendForm(serviceID, templateID, form)
+        .then(
+          () => {
+            Swal.fire({
+              title: "Tudo certo!",
+              text: "Sua mensagem foi enviada com sucesso!",
+              icon: "success",
+              width: "450px",
+              padding: "3em",
+              customClass: { popup: "swal2-popup-custom" },
+            });
+
+            form.reset();
+            
+            // 3. Reseta o ReCaptcha após o envio com sucesso
+            grecaptcha.reset();
+          },
+          (err) => {
+            console.error("Erro EmailJS:", err);
+            Swal.fire({
+              title: "Erro!",
+              text: "Ocorreu um erro ao enviar. Tente novamente.",
+              icon: "error",
+              width: "450px",
+              padding: "3em",
+              customClass: { popup: "swal2-popup-custom" },
+            });
+          }
+        );
+    });
+  } else {
+    console.error("Elemento #contact-form não encontrado.");
+  }
+});
