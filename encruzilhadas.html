@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/encruzilhadas-main.css" />
     <link rel="icon" type="image/png" href="assets/img/index/logo.PNG" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Multiversidade dos Povos da Terra de Mãe Preta</title>
   </head>
   <body>
@@ -207,21 +210,39 @@
             <p>Se preferir, preencha o formulário ao lado.</p>
             <p>Responderemos assim que possível!</p>
           </div>
-          <form class="contact-form" action="#" method="post" novalidate>
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="#"
+            method="post"
+            novalidate
+          >
             <div class="form-row two">
-              <input type="text" name="nome" placeholder="Nome" required />
-              <input type="tel" name="telefone" placeholder="Telefone" />
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Nome Completo"
+                required
+              />
+              <input type="tel" name="phone_number" placeholder="Telefone" />
             </div>
             <div class="form-row">
               <input type="email" name="email" placeholder="E-mail" required />
             </div>
             <div class="form-row">
               <textarea
-                name="mensagem"
+                name="message"
                 rows="6"
                 placeholder="Digite sua mensagem aqui..."
               ></textarea>
             </div>
+
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LeROx4sAAAAADt4EzFo39xf0_w-5jJ03zUd2EAn"
+            ></div>
+            <br />
+
             <button type="submit" class="btn-submit">Enviar</button>
           </form>
         </div>

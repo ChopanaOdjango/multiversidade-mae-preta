@@ -1,128 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" type="image/png" href="assets/img/index/logo.PNG" />
+    <script src="./assets/js/scripts.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Multiversidade dos Povos da Terra de Mãe Preta</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="icon" type="image/png" href="assets/img/index/logo.PNG" />
-  <script src="./assets/js/scripts.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <title>Multiversidade dos Povos da Terra de Mãe Preta</title>
-</head>
-
-<body>
-  <header class="header">
-    <a href="index.html#home" class="logo-text">
-      <span class="logo-title">MULTIVERSIDADE</span>
-      <span class="logo-subtitle">DOS POVOS DA TERRA DE MÃE PRETA</span>
-    </a>
-    <button id="menu-toggle" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
-      ☰
-    </button>
-    <nav class="navbar" id="nav">
-      <button id="menu-close" aria-label="Fechar menu">✕</button>
-      <ul class="nav-list">
-        <li class="has-dropdown">
-          <a href="okan-ilu.html" class="dropdown-toggle">
-            OKAN ILU
-            <span class="arrow" role="button" tabindex="0" aria-expanded="false" aria-label="Abrir submenu">▼</span>
-          </a>
-          <ul class="dropdown">
-            <li><a href="okan-ilu-2017.html" class="active">2017</a></li>
-            <li><a href="okan-ilu-2018.html" class="active">2018</a></li>
-            <li><a href="okan-ilu-2019.html" class="active">2019</a></li>
-            <li><a href="okan-ilu-2020.html" class="active">2020</a></li>
-            <li><a href="okan-ilu-2021.html" class="active">2021</a></li>
-            <li><a href="okan-ilu-2022.html" class="active">2022</a></li>
-          </ul>
-        </li>
-        <li><a href="sumauma.html">SUMAÚMA</a></li>
-        <li class="has-dropdown encruzilhadas">
-          <a href="encruzilhadas.html" class="dropdown-toggle">
-            ENCRUZILHADAS
-            <span class="arrow" role="button" tabindex="0" aria-expanded="false" aria-label="Abrir submenu">▼</span>
-          </a>
-          <ul class="dropdown">
-            <li>
-              <a href="encruzilhadas-programa.html" class="active">O PROGRAMA</a>
-            </li>
-            <li>
-              <a href="encruzilhadas-jovens.html" class="active">JOVENS MULTIPLICADORES</a>
-            </li>
-            <li>
-              <a href="okan-ilu-2021.html" class="active">OKAN ILU 2021</a>
-            </li>
-            <li>
-              <a href="encruzilhadas-esperanca.html" class="active">TECENDO A ESPERANÇA</a>
-            </li>
-            <li>
-              <a href="encruzilhadas-festival.html" class="active">FESTIVAL DA MULTIVERSIDADE</a>
-            </li>
-            <li>
-              <a href="encruzilhadas-encontros.html" class="active">ENCONTROS COMUNITÁRIOS</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="abrigos.html">CASAS DE ACOLHIMENTO</a></li>
-        <li><a href="index.html#contato-footer">CONTATO</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="quem-somos" id="quem-somos">
-      <div class="quem-somos-container">
-        <div class="quem-somos-text">
-          <h2>QUEM SOMOS?</h2>
-          <p>
-            A Multiversidade dos Povos da Terra de Mãe Preta é uma teia de
-            comunidades quilombolas, indígenas, ribeirinhas e de terreiro, do
-            Pampa à Amazônia, protagonizada por mulheres. Criada em 2017, na
-            Comunidade Quilombola Morada da Paz (RS), afirma uma rede de
-            saberes em defesa da vida, dos territórios ancestrais e de novos
-            modos de sentirpensar o mundo.
-          </p>
-          <p>
-            Além de articular saberes e resistências, também oferecemos lares
-            temporários para pessoas em situações de vulnerabilidade. Somos
-            território, memória e cuidado, tecendo redes que unem luta, vida e
-            esperança.
-          </p>
-          <a href="abrigos.html" class="btn-quem-somos">Conferir abrigos</a>
-        </div>
-        <div class="quem-somos-image">
-          <img src="assets/img/index/1.png"
-            alt="Ilustração de uma mulher negra/indígena com tranças longas e brincos coloridos, olhando para frente." />
-        </div>
-      </div>
-    </section>
-
-    <section class="sobre-nos" id="sobre-nos">
-      <div class="sobre-nos-container">
-        <div class="sobre-nos-symbol">
-
-          <a href="encruzilhadas.html">
-            <img src="assets/img/index/2.png" alt="Encruzilhadas" />
-          </a>
-          <a href="okan-ilu.html">
-            <img src="assets/img/index/3.png" alt="Tambor do Coração OKAN ILU" />
-          </a>
-          <a href="sumauma.html">
-            <img src="assets/img/index/4.png" alt="Sumaúma" />
-          </a>
-
-          <div class="sobre-nos-text">
-            <h2 class="sobre-nos-title">SOBRE NÓS</h2>
-            <p class="sobre-nos-legend">
-              “A consciência é o pilar dos tempos” (Mãe Preta)
-            </p>
+  <body>
+    <header class="header">
+      <a href="index.html#home" class="logo-text">
+        <span class="logo-title">MULTIVERSIDADE</span>
+        <span class="logo-subtitle">DOS POVOS DA TERRA DE MÃE PRETA</span>
+      </a>
+      <button
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-controls="nav"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="navbar" id="nav">
+        <button id="menu-close" aria-label="Fechar menu">✕</button>
+        <ul class="nav-list">
+          <li class="has-dropdown">
+            <a href="okan-ilu.html" class="dropdown-toggle">
+              OKAN ILU
+              <span
+                class="arrow"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-label="Abrir submenu"
+                >▼</span
+              >
+            </a>
+            <ul class="dropdown">
+              <li><a href="okan-ilu-2017.html" class="active">2017</a></li>
+              <li><a href="okan-ilu-2018.html" class="active">2018</a></li>
+              <li><a href="okan-ilu-2019.html" class="active">2019</a></li>
+              <li><a href="okan-ilu-2020.html" class="active">2020</a></li>
+              <li><a href="okan-ilu-2021.html" class="active">2021</a></li>
+              <li><a href="okan-ilu-2022.html" class="active">2022</a></li>
+            </ul>
+          </li>
+          <li><a href="sumauma.html">SUMAÚMA</a></li>
+          <li class="has-dropdown encruzilhadas">
+            <a href="encruzilhadas.html" class="dropdown-toggle">
+              ENCRUZILHADAS
+              <span
+                class="arrow"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                aria-label="Abrir submenu"
+                >▼</span
+              >
+            </a>
+            <ul class="dropdown">
+              <li>
+                <a href="encruzilhadas-programa.html" class="active"
+                  >O PROGRAMA</a
+                >
+              </li>
+              <li>
+                <a href="encruzilhadas-jovens.html" class="active"
+                  >JOVENS MULTIPLICADORES</a
+                >
+              </li>
+              <li>
+                <a href="okan-ilu-2021.html" class="active">OKAN ILU 2021</a>
+              </li>
+              <li>
+                <a href="encruzilhadas-esperanca.html" class="active"
+                  >TECENDO A ESPERANÇA</a
+                >
+              </li>
+              <li>
+                <a href="encruzilhadas-festival.html" class="active"
+                  >FESTIVAL DA MULTIVERSIDADE</a
+                >
+              </li>
+              <li>
+                <a href="encruzilhadas-encontros.html" class="active"
+                  >ENCONTROS COMUNITÁRIOS</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="abrigos.html">CASAS DE ACOLHIMENTO</a></li>
+          <li><a href="index.html#contato-footer">CONTATO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="quem-somos" id="quem-somos">
+        <div class="quem-somos-container">
+          <div class="quem-somos-text">
+            <h2>QUEM SOMOS?</h2>
             <p>
               A Multiversidade dos Povos da Terra de Mãe Preta é uma teia de
-              comunidades kilombolas, indígenas, ribeirinhas e de terreiro, do
+              comunidades quilombolas, indígenas, ribeirinhas e de terreiro, do
               Pampa à Amazônia, protagonizada por mulheres. Criada em 2017, na
-              Comunidade Kilombola Morada da Paz (RS), afirma uma rede de
+              Comunidade Quilombola Morada da Paz (RS), afirma uma rede de
               saberes em defesa da vida, dos territórios ancestrais e de novos
               modos de sentirpensar o mundo.
             </p>
@@ -132,211 +118,288 @@
               território, memória e cuidado, tecendo redes que unem luta, vida e
               esperança.
             </p>
+            <a href="abrigos.html" class="btn-quem-somos">Conferir abrigos</a>
           </div>
-
-          <div class="sobre-nos-text">
-            <h3 class="sobre-nos-subtitle">
-              Quem faz parte da Multiversidade?
-            </h3>
-            <p class="sobre-nos-subtitle-quote">
-              "É preciso reunir o povo e sonhar juntos nessa lua. Para que
-              acessem os campos do sol, da chuva, do vento da Multiversidade."
-              (Iapucã)
-            </p>
-            <p>
-              Somos originários de comunidades de diferentes estados que se
-              encontraram em rituais-celebrações que acontecem na Comunidade
-              Kilombola Morada da Paz. Somos Comunidade Kilombola Morada da Paz
-              (RS), somos Quilombo do Dandá (BA), somos Quilombo Abacatal (PA),
-              somos quilombo Manzo (MG), somos aldeia indígena Kariri-Xocó e
-              Fulni-ô (AL), somos povo Macuxi (RR), somos comunidade Nova Canaã
-              (PA). Somos uma grande ciranda!
-            </p>
-            <p>
-              Somos as/os protagonistas das nossas histórias coletivas, desde os
-              nossos corpos e territórios. Somos anciãs e anciãos, adultos,
-              jovens, crianças. Ao nosso lado também caminham alianças e
-              parcerias. Pessoas que compartilham afetos e projetos de
-              transformação do mundo: ativistas da cultura, dos direitos
-              humanos, ambientalistas, membros de organizações sociais e membros
-              de universidades.
-            </p>
-            <p>
-              Não somos iguais, somos múltiplos. De idades, territórios, raças,
-              gêneros, sexualidades, povos, religiões. Somos sonhadoras e
-              sonhadores: sonhamos um outro mundo possível. Como dizem as/os
-              irmãs/ãos indígenas zapatistas do México, sonhamos “um mundo onde
-              caibam muitos mundos”. Somos teia: a teia de Ananse, que tece sua
-              teia de prata e traz para seu povo muitas histórias e sabedorias.
-            </p>
+          <div class="quem-somos-image">
+            <img
+              src="assets/img/index/1.png"
+              alt="Ilustração de uma mulher negra/indígena com tranças longas e brincos coloridos, olhando para frente."
+            />
           </div>
+        </div>
+      </section>
 
-          <div class="sobre-nos-text">
-            <h3 class="sobre-nos-subtitle">Como funciona a Multiversidade?</h3>
-            <p>
-              Nosso pensamento não é linear, é circular. Não formamos, nem
-              distribuímos títulos. Ao contrário, queremos desformar, tirar
-              nosso pensamento das caixinhas e formatações colonialistas,
-              fazemos isso através de ipádès, rodas de conversa, onde a fala, o
-              canto, a dança e a escuta são ancestrais e fundamentais.
-            </p>
-            <p>
-              Somos sabedoras/es sentipensantes. Aprendemos, com os nossas/os
-              ancestrais, a aprender e a ensinar. Fazemos isso contando
-              histórias e criando vínculos com os seres com quem compartilhamos
-              o mundo. Contamos nossas histórias para continuar vivendo.
-              Sentipensamos com a mente emocionada e com o coração inteligente.
-            </p>
-            <p>
-              Somos teia de Anansi. Não existe uma sede, um centro, um lugar. A
-              Multiversidade acontece nas comunidades, nas periferias urbanas,
-              nas brechas clandestinas das universidades e organizações, nas
-              ocupações, nas retomadas, nas manifestações de ruas. Nosso papel é
-              possibilitar bons encontros mobilizados pelas lutas em defesa da
-              vida.
-            </p>
-            <p>
-              Temos um propósito comum. Somos seres integrados. Cultivamos, cada
-              um à sua maneira, o bem viver e sentimos a urgência do chamado da
-              Terra em defesa da vida. Por isso, algumas linhas centrais
-              orientam nossas conversas e ações:
-            </p>
-          </div>
-
-          <div class="sobre-nos-text">
-            <ol>
-              <li>Educação e nossos modos de ensinar e aprender;</li>
-              <li>Terra e direitos territoriais;</li>
-              <li>Cura e Ecoespiritualidade;</li>
-              <li>Agroecologia e Saúde;</li>
-              <li>Ekogestão e autonomia comunitária;</li>
-              <li>Identidades de gênero e sexualidades;</li>
-              <li>
-                Racismos Ambientais, Institucionais, Religiosos e Sistêmicos.
-              </li>
-            </ol>
-          </div>
-
-          <div class="dossie-box">
-            <a href="http://www.guaritadigital.com.br/casaleiria/acervo/compaz/dossiekilombo/index.html"
-              target="_blank">
-              <img src="assets/img/index/5.png" alt="Dossiê Kilombo" />
+      <section class="sobre-nos" id="sobre-nos">
+        <div class="sobre-nos-container">
+          <div class="sobre-nos-symbol">
+            <a href="encruzilhadas.html">
+              <img src="assets/img/index/2.png" alt="Encruzilhadas" />
             </a>
-            <div class="dossie-text">
-              <h4>DOSSIÊ KILOMBO<br />Proteger, Defender e Vigiar</h4>
-              <p>
-                O Dossiê Kilombo – Proteger, Defender e Vigiar, publicado em
-                2022, contém a cartografia comunitária do Território Kilombola
-                Morada da Paz, realizada ao longo do Programa Encruzilhadas da
-                Multiversidade, Protocolo de Consulta e Estatuto Comunitário
-                Igbesi Alaafia.
+            <a href="okan-ilu.html">
+              <img
+                src="assets/img/index/3.png"
+                alt="Tambor do Coração OKAN ILU"
+              />
+            </a>
+            <a href="sumauma.html">
+              <img src="assets/img/index/4.png" alt="Sumaúma" />
+            </a>
+
+            <div class="sobre-nos-text">
+              <h2 class="sobre-nos-title">SOBRE NÓS</h2>
+              <p class="sobre-nos-legend">
+                “A consciência é o pilar dos tempos” (Mãe Preta)
               </p>
+              <p>
+                A Multiversidade dos Povos da Terra de Mãe Preta é uma teia de
+                comunidades kilombolas, indígenas, ribeirinhas e de terreiro, do
+                Pampa à Amazônia, protagonizada por mulheres. Criada em 2017, na
+                Comunidade Kilombola Morada da Paz (RS), afirma uma rede de
+                saberes em defesa da vida, dos territórios ancestrais e de novos
+                modos de sentirpensar o mundo.
+              </p>
+              <p>
+                Além de articular saberes e resistências, também oferecemos
+                lares temporários para pessoas em situações de vulnerabilidade.
+                Somos território, memória e cuidado, tecendo redes que unem
+                luta, vida e esperança.
+              </p>
+            </div>
+
+            <div class="sobre-nos-text">
+              <h3 class="sobre-nos-subtitle">
+                Quem faz parte da Multiversidade?
+              </h3>
+              <p class="sobre-nos-subtitle-quote">
+                "É preciso reunir o povo e sonhar juntos nessa lua. Para que
+                acessem os campos do sol, da chuva, do vento da Multiversidade."
+                (Iapucã)
+              </p>
+              <p>
+                Somos originários de comunidades de diferentes estados que se
+                encontraram em rituais-celebrações que acontecem na Comunidade
+                Kilombola Morada da Paz. Somos Comunidade Kilombola Morada da
+                Paz (RS), somos Quilombo do Dandá (BA), somos Quilombo Abacatal
+                (PA), somos quilombo Manzo (MG), somos aldeia indígena
+                Kariri-Xocó e Fulni-ô (AL), somos povo Macuxi (RR), somos
+                comunidade Nova Canaã (PA). Somos uma grande ciranda!
+              </p>
+              <p>
+                Somos as/os protagonistas das nossas histórias coletivas, desde
+                os nossos corpos e territórios. Somos anciãs e anciãos, adultos,
+                jovens, crianças. Ao nosso lado também caminham alianças e
+                parcerias. Pessoas que compartilham afetos e projetos de
+                transformação do mundo: ativistas da cultura, dos direitos
+                humanos, ambientalistas, membros de organizações sociais e
+                membros de universidades.
+              </p>
+              <p>
+                Não somos iguais, somos múltiplos. De idades, territórios,
+                raças, gêneros, sexualidades, povos, religiões. Somos sonhadoras
+                e sonhadores: sonhamos um outro mundo possível. Como dizem as/os
+                irmãs/ãos indígenas zapatistas do México, sonhamos “um mundo
+                onde caibam muitos mundos”. Somos teia: a teia de Ananse, que
+                tece sua teia de prata e traz para seu povo muitas histórias e
+                sabedorias.
+              </p>
+            </div>
+
+            <div class="sobre-nos-text">
+              <h3 class="sobre-nos-subtitle">
+                Como funciona a Multiversidade?
+              </h3>
+              <p>
+                Nosso pensamento não é linear, é circular. Não formamos, nem
+                distribuímos títulos. Ao contrário, queremos desformar, tirar
+                nosso pensamento das caixinhas e formatações colonialistas,
+                fazemos isso através de ipádès, rodas de conversa, onde a fala,
+                o canto, a dança e a escuta são ancestrais e fundamentais.
+              </p>
+              <p>
+                Somos sabedoras/es sentipensantes. Aprendemos, com os nossas/os
+                ancestrais, a aprender e a ensinar. Fazemos isso contando
+                histórias e criando vínculos com os seres com quem
+                compartilhamos o mundo. Contamos nossas histórias para continuar
+                vivendo. Sentipensamos com a mente emocionada e com o coração
+                inteligente.
+              </p>
+              <p>
+                Somos teia de Anansi. Não existe uma sede, um centro, um lugar.
+                A Multiversidade acontece nas comunidades, nas periferias
+                urbanas, nas brechas clandestinas das universidades e
+                organizações, nas ocupações, nas retomadas, nas manifestações de
+                ruas. Nosso papel é possibilitar bons encontros mobilizados
+                pelas lutas em defesa da vida.
+              </p>
+              <p>
+                Temos um propósito comum. Somos seres integrados. Cultivamos,
+                cada um à sua maneira, o bem viver e sentimos a urgência do
+                chamado da Terra em defesa da vida. Por isso, algumas linhas
+                centrais orientam nossas conversas e ações:
+              </p>
+            </div>
+
+            <div class="sobre-nos-text">
+              <ol>
+                <li>Educação e nossos modos de ensinar e aprender;</li>
+                <li>Terra e direitos territoriais;</li>
+                <li>Cura e Ecoespiritualidade;</li>
+                <li>Agroecologia e Saúde;</li>
+                <li>Ekogestão e autonomia comunitária;</li>
+                <li>Identidades de gênero e sexualidades;</li>
+                <li>
+                  Racismos Ambientais, Institucionais, Religiosos e Sistêmicos.
+                </li>
+              </ol>
+            </div>
+
+            <div class="dossie-box">
+              <a
+                href="http://www.guaritadigital.com.br/casaleiria/acervo/compaz/dossiekilombo/index.html"
+                target="_blank"
+              >
+                <img
+                  src="assets/img/index/5.png"
+                  id="dossie"
+                  alt="Dossiê Kilombo"
+                />
+              </a>
+              <div class="dossie-text">
+                <h4>DOSSIÊ KILOMBO<br />Proteger, Defender e Vigiar</h4>
+                <p>
+                  O Dossiê Kilombo – Proteger, Defender e Vigiar, publicado em
+                  2022, contém a cartografia comunitária do Território Kilombola
+                  Morada da Paz, realizada ao longo do Programa Encruzilhadas da
+                  Multiversidade, Protocolo de Consulta e Estatuto Comunitário
+                  Igbesi Alaafia.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-    </section>
+      </section>
 
-    <section id="abrigos">
-      <div class="abrigos-container">
-        <div class="abrigos-text">
-          <h2>CASAS DE ACOLHIMENTO</h2>
-          <p>
-            Além de fortalecer territórios e saberes ancestrais, a
-            Multiversidade também se dedica a cuidar das vidas que necessitam
-            de proteção imediata. Oferecemos lares temporários para pessoas em
-            situação de vulnerabilidade — vítimas de violência, pessoas
-            LGBTQIAP+ expulsas de suas casas, famílias em risco ou qualquer
-            ser humano que precise de um espaço seguro para recomeçar.
-          </p>
-          <a href="abrigos.html" class="btn-abrigos">Conferir abrigos</a>
-        </div>
-        <div class="abrigos-image">
-          <img src="assets/img/index/6.png"
-            alt="Ilustração de uma mulher indígena com brincos coloridos, olhando para frente." />
-        </div>
-      </div>
-    </section>
-
-    <section class="parceiros" id="parceiros">
-      <div class="parceiros-container">
-        <div class="parceiros-text">
-          <h2 class="parceiros-title">PARCEIROS</h2>
-        </div>
-        <div class="parceiros-symbol">
-          <img src="assets/img/index/parceiros/1-2.png" />
-          <img src="assets/img/index/parceiros/1.png" />
-          <img src="assets/img/index/parceiros/4-2.png" />
-          <img src="assets/img/index/parceiros/4-3.png" />
-          <img src="assets/img/index/parceiros/4.png" />
-          <img src="assets/img/index/parceiros/2-2.png" />
-          <img src="assets/img/index/parceiros/2-3.png" />
-          <img src="assets/img/index/parceiros/2.png" />
-          <img src="assets/img/index/parceiros/3-2.png" />
-          <img src="assets/img/index/parceiros/3-3.png" />
-          <img src="assets/img/index/parceiros/3-4.png" />
-          <img src="assets/img/index/parceiros/3.png" />
-          <img src="assets/img/index/parceiros/5-2.png" />
-          <img src="assets/img/index/parceiros/5-3.png" />
-          <img src="assets/img/index/parceiros/5.png" />
-          <img src="assets/img/index/parceiros/6-2.png" />
-          <img src="assets/img/index/parceiros/6-3.png" />
-          <img src="assets/img/index/parceiros/6.png" />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-
-
-  <footer id="contato-footer" class="footer">
-    <div class="footer-bar"></div>
-    <div class="footer-top">
-      <div class="footer-grid">
-        <div class="footer-info">
-          <h2>Contato</h2>
-          <p>
-            Entre em contato conosco ou envie um email para
-            <a href="mailto:multiversidade.compaz@gmail.com">multiversidade.compaz@gmail.com</a>
-          </p>
-          <p>Se preferir, preencha o formulário ao lado.</p>
-          <p>Responderemos assim que possível!</p>
-        </div>
-        <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
-          <div class="form-row two">
-            <input type="text" name="from_name" placeholder="Nome Completo" required>
-            <input type="tel" name="phone_number" placeholder="Telefone" />
+      <section id="abrigos">
+        <div class="abrigos-container">
+          <div class="abrigos-text">
+            <h2>CASAS DE ACOLHIMENTO</h2>
+            <p>
+              Além de fortalecer territórios e saberes ancestrais, a
+              Multiversidade também se dedica a cuidar das vidas que necessitam
+              de proteção imediata. Oferecemos lares temporários para pessoas em
+              situação de vulnerabilidade — vítimas de violência, pessoas
+              LGBTQIAP+ expulsas de suas casas, famílias em risco ou qualquer
+              ser humano que precise de um espaço seguro para recomeçar.
+            </p>
+            <a href="abrigos.html" class="btn-abrigos">Conferir abrigos</a>
           </div>
-          <div class="form-row">
-            <input type="email" name="email" placeholder="E-mail" required />
+          <div class="abrigos-image">
+            <img
+              src="assets/img/index/6.png"
+              alt="Ilustração de uma mulher indígena com brincos coloridos, olhando para frente."
+            />
           </div>
-          <div class="form-row">
-            <textarea name="message" rows="6" placeholder="Digite sua mensagem aqui..."></textarea>
+        </div>
+      </section>
+
+      <section class="parceiros" id="parceiros">
+        <div class="parceiros-container">
+          <div class="parceiros-text">
+            <h2 class="parceiros-title">PARCEIROS</h2>
           </div>
+          <div class="parceiros-symbol">
+            <img src="assets/img/index/parceiros/1-2.png" />
+            <img src="assets/img/index/parceiros/1.png" />
+            <img src="assets/img/index/parceiros/4-2.png" />
+            <img src="assets/img/index/parceiros/4-3.png" />
+            <img src="assets/img/index/parceiros/4.png" />
+            <img src="assets/img/index/parceiros/2-2.png" />
+            <img src="assets/img/index/parceiros/2-3.png" />
+            <img src="assets/img/index/parceiros/2.png" />
+            <img src="assets/img/index/parceiros/3-2.png" />
+            <img src="assets/img/index/parceiros/3-3.png" />
+            <img src="assets/img/index/parceiros/3-4.png" />
+            <img src="assets/img/index/parceiros/3.png" />
+            <img src="assets/img/index/parceiros/5-2.png" />
+            <img src="assets/img/index/parceiros/5-3.png" />
+            <img src="assets/img/index/parceiros/5.png" />
+            <img src="assets/img/index/parceiros/6-2.png" />
+            <img src="assets/img/index/parceiros/6-3.png" />
+            <img src="assets/img/index/parceiros/6.png" />
+          </div>
+        </div>
+      </section>
+    </main>
 
-          <div class="g-recaptcha" data-sitekey="6LeROx4sAAAAADt4EzFo39xf0_w-5jJ03zUd2EAn"></div>
-          <br>
-
-          <button type="submit" class="btn-submit">Enviar</button>
-        </form>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>
-        Copyright © 2025 Todos os direitos reservados - Multiversidade dos
-        Povos da Terra de Mãe Preta
-      </p>
-    </div>
-  </footer>
-</body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
 
+    <footer id="contato-footer" class="footer">
+      <div class="footer-bar"></div>
+      <div class="footer-top">
+        <div class="footer-grid">
+          <div class="footer-info">
+            <h2>Contato</h2>
+            <p>
+              Entre em contato conosco ou envie um email para
+              <a href="mailto:multiversidade.compaz@gmail.com"
+                >multiversidade.compaz@gmail.com</a
+              >
+            </p>
+            <p>Se preferir, preencha o formulário ao lado.</p>
+            <p>Responderemos assim que possível!</p>
+          </div>
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="#"
+            method="post"
+            novalidate
+          >
+            <div class="form-row two">
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Nome Completo"
+                required
+              />
+              <input type="tel" name="phone_number" placeholder="Telefone" />
+            </div>
+            <div class="form-row">
+              <input type="email" name="email" placeholder="E-mail" required />
+            </div>
+            <div class="form-row">
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Digite sua mensagem aqui..."
+              ></textarea>
+            </div>
+
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LeROx4sAAAAADt4EzFo39xf0_w-5jJ03zUd2EAn"
+            ></div>
+            <br />
+
+            <button type="submit" class="btn-submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Copyright © 2025 Todos os direitos reservados - Multiversidade dos
+          Povos da Terra de Mãe Preta
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/tecendo-esperanca.css" />
     <link rel="icon" type="image/png" href="assets/img/index/logo.PNG" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Multiversidade dos Povos da Terra de Mãe Preta</title>
   </head>
   <body>
@@ -171,13 +174,26 @@
           </div>
         </div>
       </section>
-      
-  <section class="esperanca-section esperanca-spotify">
+
+      <section class="esperanca-section esperanca-spotify">
         <div class="esperanca-container">
           <p class="esperanca-text">
-            Ao longo de 2022, fomos tecendo o diálogo sobre as experiências que esses grupos têm criado a partir de mecanismos de auto sobrevivência que geram relações ecológicas de composição da vida com seres humanos e não-humanos dos distintos territórios, frequentemente ameaçados pela lógica de consumo do desenvolvimento econômico e também refletir sobre os instrumentos de garantia de direitos que têm sido acessados atualmente, bem como nas possibilidades de conexões parciais entre as diferentes experiências capazes de produzir fortalecimento mútuo.  Esses encontros aconteceram virtualmente de março a julho, de 15 em 15 dias, totalizando 13 encontros. Organizados através de ipádès virtuais, os encontros foram guiados por perguntas-chaves e atividades lúdicas fomentadoras de trocas e reflexões coletivas.
+            Ao longo de 2022, fomos tecendo o diálogo sobre as experiências que
+            esses grupos têm criado a partir de mecanismos de auto sobrevivência
+            que geram relações ecológicas de composição da vida com seres
+            humanos e não-humanos dos distintos territórios, frequentemente
+            ameaçados pela lógica de consumo do desenvolvimento econômico e
+            também refletir sobre os instrumentos de garantia de direitos que
+            têm sido acessados atualmente, bem como nas possibilidades de
+            conexões parciais entre as diferentes experiências capazes de
+            produzir fortalecimento mútuo. Esses encontros aconteceram
+            virtualmente de março a julho, de 15 em 15 dias, totalizando 13
+            encontros. Organizados através de ipádès virtuais, os encontros
+            foram guiados por perguntas-chaves e atividades lúdicas fomentadoras
+            de trocas e reflexões coletivas.
           </p>
-  </section>
+        </div>
+      </section>
       <section class="esperanca-section esperanca-perguntas">
         <div class="esperanca-container esperanca-grid">
           <div class="esperanca-col">
@@ -412,21 +428,39 @@
             <p>Se preferir, preencha o formulário ao lado.</p>
             <p>Responderemos assim que possível!</p>
           </div>
-          <form class="contact-form" action="#" method="post" novalidate>
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="#"
+            method="post"
+            novalidate
+          >
             <div class="form-row two">
-              <input type="text" name="nome" placeholder="Nome" required />
-              <input type="tel" name="telefone" placeholder="Telefone" />
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Nome Completo"
+                required
+              />
+              <input type="tel" name="phone_number" placeholder="Telefone" />
             </div>
             <div class="form-row">
               <input type="email" name="email" placeholder="E-mail" required />
             </div>
             <div class="form-row">
               <textarea
-                name="mensagem"
+                name="message"
                 rows="6"
                 placeholder="Digite sua mensagem aqui..."
               ></textarea>
             </div>
+
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LeROx4sAAAAADt4EzFo39xf0_w-5jJ03zUd2EAn"
+            ></div>
+            <br />
+
             <button type="submit" class="btn-submit">Enviar</button>
           </form>
         </div>
