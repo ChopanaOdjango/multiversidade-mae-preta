@@ -301,6 +301,7 @@ body {
   font-size: 1.4rem;
 }
 
+
 /*---QUEM SOMOS---*/
 #quem-somos {
   width: 100%;
@@ -919,6 +920,9 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+
+
+
 /* --- Responsividade Parceiros --- */
 @media (max-width: 1100px) {
   .parceiros-container {
@@ -1327,3 +1331,103 @@ body {
 .navbar .has-dropdown.encruzilhadas > a.active {
   color: #2f3559 !important;
 }
+
+
+/* Responsividade do footer  */
+@media (max-width: 900px) {
+  .footer-top {
+    padding: 48px 8%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-info h2 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .footer-info p,
+  .footer-info a {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form-row.two {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.4rem;
+    padding: 10px 12px;
+  }
+
+  .btn-submit {
+    padding: 12px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-top {
+    padding: 36px 6%;
+  }
+
+  .footer-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .footer-info p,
+  .footer-info a {
+    font-size: 1.4rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+
+  .footer-bottom {
+    padding: 16px 10px;
+    font-size: 1.2rem;
+  }
+
+  .footer-bar {
+    height: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-top {
+    padding: 28px 5%;
+  }
+
+  .footer-info h2 {
+    font-size: 3.6rem;
+  }
+
+  .footer-info p,
+  .footer-info a {
+    font-size: 1.2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.2rem;
+    padding: 8px 10px;
+  }
+
+  .form-row {
+    margin-bottom: 10px;
+  }
+
+  .btn-submit {
+    padding: 10px;
+    font-size: 1.3rem;
+  }
+}
+
