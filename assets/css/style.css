@@ -40,11 +40,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 18%;
+  padding: 1rem 4%;
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 4rem;
   z-index: 9999;
   background-color: #ffffffa4;
 }
@@ -54,6 +55,8 @@ body {
   flex-direction: column;
   gap: 4px;
   line-height: 1.1;
+  flex-shrink: 0;
+  transform-origin: left center;
   transition: transform 0.3s ease;
 }
 .logo-text:hover {
@@ -67,6 +70,7 @@ body {
   letter-spacing: 1px;
   font-size: 2.9rem;
   text-transform: uppercase;
+  text-align: center;
   border-bottom: 3px solid #2f3559;
   padding-bottom: 3px;
 }
@@ -118,7 +122,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 6.5rem;
 }
 
 .navbar .nav-list > li {
@@ -127,9 +131,10 @@ body {
 
 .navbar a {
   font-family: "Chelsea Market", cursive;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #2f3559;
   font-weight: 500;
+  white-space: nowrap;
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
   padding-bottom: 0.5rem;
@@ -1243,6 +1248,35 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/*responsividade navbar - notebooks*/
+@media (min-width: 901px) and (max-width: 1366px) {
+  .navbar .nav-list {
+    gap: 4rem;
+  }
+  .navbar a {
+    font-size: 1.65rem;
+  }
+}
+@media (min-width: 901px) and (max-width: 1150px) {
+  .header {
+    padding: 1rem 3%;
+    gap: 2.5rem;
+  }
+  .logo-title {
+    font-size: 2.5rem;
+  }
+  .logo-subtitle {
+    font-size: 1.2rem;
+    max-width: 165px;
+  }
+  .navbar .nav-list {
+    gap: 2.6rem;
+  }
+  .navbar a {
+    font-size: 1.5rem;
+  }
+}
+
 /*responsividade navbar*/
 @media (max-width: 900px) {
   #menu-toggle {

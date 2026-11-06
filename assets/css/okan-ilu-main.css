@@ -11,7 +11,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 18%;
+  padding: 1rem 4%;
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
