@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="200" viewBox="0 0 1400 200">
+  <!-- Faixas onduladas laranja e azul com búzios, na base da seção de abertura do Okan Ilu -->
+  <defs>
+    <linearGradient id="entrada" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0" />
+      <stop offset="0.12" stop-color="#fff" />
+      <stop offset="1" stop-color="#fff" />
+    </linearGradient>
+    <mask id="fade" maskUnits="userSpaceOnUse" x="0" y="0" width="1400" height="200">
+      <rect width="1400" height="200" fill="url(#entrada)" />
+    </mask>
+    <path id="laranja" d="M-40,120 C140,70 300,80 470,118 S800,170 1000,120 S1260,40 1440,70" />
+    <path id="azul" d="M-40,168 C160,130 330,138 500,160 S820,196 1020,160 S1270,100 1440,124" />
+    <path id="fio" d="M-40,92 C160,50 320,58 480,92 S810,140 1010,92 S1270,18 1440,46" />
+    <g id="buzio">
+      <ellipse rx="12" ry="17" fill="#d99a4a" stroke="#6b3410" stroke-width="1.5" />
+      <ellipse rx="7.5" ry="13" fill="#c9832f" />
+      <path d="M0,-12 C3,-4 -3,4 0,12" fill="none" stroke="#3a1a08" stroke-width="2.4" stroke-linecap="round" />
+      <path d="M-3.5,-7 h2 M-3.5,-2 h2 M-3.5,3 h2 M1.5,-5 h2 M1.5,0 h2 M1.5,5 h2" stroke="#3a1a08" stroke-width="1" />
+    </g>
+  </defs>
+
+  <g mask="url(#fade)">
+    <!-- fio laranja fino -->
+    <use href="#fio" fill="none" stroke="#e07a2a" stroke-width="3" opacity="0.85" />
+
+    <!-- faixa laranja larga com blocos e triângulos -->
+    <use href="#laranja" fill="none" stroke="#c4541a" stroke-width="46" />
+    <use href="#laranja" fill="none" stroke="#e8823a" stroke-width="2" transform="translate(0,-19)" />
+    <use href="#laranja" fill="none" stroke="#e8823a" stroke-width="2" transform="translate(0,19)" />
+    <use href="#laranja" fill="none" stroke="#f0a050" stroke-width="20" stroke-dasharray="4 8 14 8" opacity="0.7" />
+    <use href="#laranja" fill="none" stroke="#8e3510" stroke-width="8" stroke-dasharray="12 12" stroke-dashoffset="6" />
+
+    <!-- faixa azul -->
+    <use href="#azul" fill="none" stroke="#2c4fb0" stroke-width="22" />
+    <use href="#azul" fill="none" stroke="#5c7fd6" stroke-width="2" stroke-dasharray="7 6" />
+    <use href="#azul" fill="none" stroke="#e07a2a" stroke-width="3" transform="translate(0,20)" opacity="0.8" />
+
+    <!-- búzios -->
+    <use href="#buzio" transform="translate(760,128) rotate(-8)" />
+    <use href="#buzio" transform="translate(820,132) rotate(6)" />
+    <use href="#buzio" transform="translate(880,126) rotate(-4) scale(0.8)" />
+  </g>
+</svg>

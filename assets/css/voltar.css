@@ -1,0 +1,57 @@
+/* Seta de voltar no mesmo padrão das páginas Okan Ilu 2018–2022 (.okan-back):
+   um "‹" grande, sem círculo, na altura do título.
+   Okan Ilu 2017 -> okan-ilu.html; páginas de Encruzilhadas -> encruzilhadas.html.
+   A altura de cada página vem da variável --voltar-top (no próprio link). */
+.voltar-pagina {
+  position: absolute;
+  top: var(--voltar-top, 130px);
+  left: calc(18% - 28px);
+  z-index: 50;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: #8f3e22;
+  font-size: 6rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+.voltar-pagina:hover {
+  color: #d47618;
+}
+
+/* fundo escuro (Okan Ilu 2017): seta branca, igual às outras do Okan Ilu */
+.voltar-pagina.voltar-claro {
+  color: #fff;
+}
+.voltar-pagina.voltar-claro:hover {
+  color: #d47618;
+}
+
+@media (max-width: 1100px) {
+  .voltar-pagina {
+    left: calc(12% - 28px);
+  }
+}
+
+/* celular: botão flutuante no canto inferior esquerdo, pra não cobrir os títulos */
+@media (max-width: 900px) {
+  .voltar-pagina,
+  .voltar-pagina.voltar-claro {
+    position: fixed;
+    top: auto;
+    bottom: 18px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 3.4rem;
+    color: #fff;
+    background: #8f3e22;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+  .voltar-pagina span {
+    margin-top: -4px;
+  }
+}

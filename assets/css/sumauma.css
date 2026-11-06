@@ -190,3 +190,25 @@ img.jogos {
     height: auto;
   }
 }
+
+/* Menu fixo no topo no desktop, igual às outras páginas (celular continua como estava) */
+@media (min-width: 901px) {
+  #header-samauma {
+    position: fixed;
+  }
+  body {
+    padding-top: 64px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1150px) {
+  body {
+    padding-top: 58px;
+  }
+}
+
+/* Mais espaço entre o menu e o título em notebook/desktop */
+@media (min-width: 901px) {
+  .h1-sumauma {
+    margin-top: 34px;
+  }
+}

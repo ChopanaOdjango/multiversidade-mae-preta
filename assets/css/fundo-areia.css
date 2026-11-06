@@ -1,0 +1,130 @@
+/* Fundo areia (mesma cor da seção "Sobre nós" da home).
+   Usado nas páginas: Encruzilhadas, O Programa, Jovens Multiplicadores,
+   Tecendo a Esperança, Festival da Multiversidade e Encontros Comunitários. */
+body,
+.encruzilhadas-home,
+#encruzilhadas-multiversidade,
+.jovens-multiplicadores,
+#tecendo-esperanca {
+  background: #f7e6d8 !important;
+}
+
+/* Textos na mesma cor da seção "Sobre nós" da home
+   (texto marrom, títulos terracota escuro, destaques terracota).
+   Menu, botões e contato não mudam. */
+main,
+body > section,
+.encruz-programa-texto p,
+.encruz-teia-title,
+.jovens-multiplicadores,
+.jovens-multiplicadores .jovem-nome,
+.jovem-nome,
+.jovem-citacao,
+.esperanca-text,
+#tecendo-esperanca,
+.spotify-link,
+p.texto,
+p.citacao,
+pre,
+body > section h3 {
+  color: #4a2c20 !important;
+}
+
+.encruzilhadas-title,
+.encruzilhadas-subtitle,
+.encruz-programa-title,
+.jovens-multiplicadores h1,
+.esperanca-title,
+#tecendo-esperanca .esperanca-title,
+.h1-encruzilhadas {
+  color: #8f3e22 !important;
+}
+
+.encruzilhadas-title::after,
+.encruz-programa-title::after,
+.jovens-multiplicadores h1::after,
+#tecendo-esperanca .esperanca-title::after,
+.h1-encruzilhadas::after {
+  background: #8f3e22 !important;
+}
+
+.esperanca-text-destaque,
+.jovem-local {
+  color: #b5532f !important;
+}
+
+/* Casas de Acolhimento (abrigos.html): mesma lógica.
+   Os cards continuam claros; botões, menu e contato não mudam. */
+.abrigos-pag {
+  background: #f7e6d8 !important;
+}
+.abrigos-pag-text,
+.card-content,
+.card-content .oferecido-title,
+.card-content ul,
+.card-content li,
+.card-content-text {
+  color: #4a2c20 !important;
+}
+.abrigos-pag-title,
+.card-content h2 {
+  color: #8f3e22 !important;
+}
+.abrigos-pag-title::after {
+  background: #8f3e22 !important;
+}
+.abrigos-pag-card {
+  border-color: #e8d3c2 !important;
+}
+.abrigos-pag-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.abrigos-pag-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(90, 40, 15, 0.18) !important;
+}
+
+/* Mais espaço entre o menu e o título em notebook/desktop (celular não muda) */
+@media (min-width: 901px) {
+  .abrigos-pag-title,
+  .encruz-programa-title,
+  .esperanca-title {
+    margin-top: 48px !important;
+  }
+  .encruzilhadas-title {
+    margin-top: 28px !important;
+  }
+  /* só Encontros Comunitários (o Festival já tem espaço suficiente) */
+  body:has(p.citacao) > section.title .h1-encruzilhadas {
+    margin-top: 40px !important;
+  }
+}
+
+/* Cards das casas: título e texto alinhados na mesma margem esquerda */
+.abrigos-pag-card .card-content {
+  align-items: flex-start;
+  text-align: left;
+}
+.abrigos-pag-card .card-content h2 {
+  text-align: left;
+  display: block;
+}
+.abrigos-pag-card .card-content-text {
+  width: 100%;
+  margin: 0;
+}
+/* links dentro dos cards (endereço e e-mail) */
+.abrigos-pag-card .card-content a {
+  color: #b5532f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.abrigos-pag-card .card-content a:hover {
+  color: #8f3e22;
+}
+.abrigos-pag-card .card-content a {
+  font: inherit;
+}
+.abrigos-pag-card .nowrap {
+  white-space: nowrap;
+}

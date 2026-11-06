@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240">
+  <!-- Faixas onduladas com grafismos e búzios, no canto inferior esquerdo da seção "Quem somos" -->
+  <defs>
+    <linearGradient id="desvanece" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff" />
+      <stop offset="0.6" stop-color="#fff" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <mask id="fade" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="240">
+      <rect width="1200" height="240" fill="url(#desvanece)" />
+    </mask>
+    <path id="faixa" d="M-40,78 C110,52 220,98 340,142 S580,222 780,218 S1020,190 1240,210" />
+    <path id="azul" d="M-40,168 C120,132 250,150 380,178 S640,236 860,236" />
+    <path id="fio" d="M260,214 C420,170 560,160 720,182 S980,214 1240,176" />
+    <g id="buzio">
+      <ellipse rx="11" ry="16" fill="#d9b48a" stroke="#7a4a26" stroke-width="1.5" />
+      <ellipse rx="7" ry="12" fill="#c49a6c" />
+      <path d="M0,-11 C3,-4 -3,4 0,11" fill="none" stroke="#4a2410" stroke-width="2.2" stroke-linecap="round" />
+      <path d="M-3,-7 h2 M-3,-2 h2 M-3,3 h2 M1,-5 h2 M1,0 h2 M1,5 h2" stroke="#4a2410" stroke-width="1" />
+    </g>
+  </defs>
+
+  <g mask="url(#fade)">
+  <!-- faixa larga com padrão de blocos e triângulos -->
+  <use href="#faixa" fill="none" stroke="#6b2510" stroke-width="54" stroke-linecap="round" />
+  <use href="#faixa" fill="none" stroke="#a3532a" stroke-width="2" transform="translate(0,-22)" opacity="0.8" />
+  <use href="#faixa" fill="none" stroke="#a3532a" stroke-width="2" transform="translate(0,22)" opacity="0.8" />
+  <use href="#faixa" fill="none" stroke="#b9663a" stroke-width="22" stroke-dasharray="3 9 12 9" opacity="0.75" />
+  <use href="#faixa" fill="none" stroke="#7d3216" stroke-width="10" stroke-dasharray="12 12" stroke-dashoffset="6" />
+
+  <!-- faixa azul -->
+  <use href="#azul" fill="none" stroke="#24418f" stroke-width="12" stroke-linecap="round" />
+  <use href="#azul" fill="none" stroke="#3d62c0" stroke-width="2" stroke-dasharray="6 6" opacity="0.8" />
+
+  <!-- fio ocre fino -->
+  <use href="#fio" fill="none" stroke="#a65a2c" stroke-width="3" opacity="0.8" />
+  <use href="#fio" fill="none" stroke="#a65a2c" stroke-width="1.5" opacity="0.5" transform="translate(0,10)" />
+
+  <!-- búzios -->
+  <use href="#buzio" transform="translate(78,70) rotate(-12)" />
+  <use href="#buzio" transform="translate(372,166) rotate(8)" />
+  <use href="#buzio" transform="translate(438,182) rotate(-6)" />
+  </g>
+</svg>

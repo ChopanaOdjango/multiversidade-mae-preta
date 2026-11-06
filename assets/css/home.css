@@ -1,0 +1,191 @@
+/* Tema terracota da página inicial (só fundo e textos das seções do conteúdo).
+   Carregado só no index.html, depois do style.css. Menu, logo e contato não mudam. */
+:root {
+  --terra: #b5532f;
+  --terra-escura: #8f3e22;
+  --barro: #4a2c20;
+  --barro-suave: #8a6654;
+  --fundo-terra: #4a2010;
+  --terra-profunda: #7a2e17;
+  --fundo-terra-claro: #f7e6d8;
+}
+
+/* FUNDOS */
+#quem-somos,
+#abrigos {
+  background-color: var(--fundo-terra);
+}
+.sobre-nos,
+.parceiros {
+  background: var(--fundo-terra-claro);
+  color: var(--barro);
+}
+
+/* QUEM SOMOS e CASAS DE ACOLHIMENTO: fundo */
+#quem-somos,
+#abrigos {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #451706;
+  background-image:
+    radial-gradient(
+      ellipse at 45% 45%,
+      rgba(125, 48, 15, 0.45) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      125deg,
+      #421505 0%,
+      #60230b 48%,
+      #361104 100%
+    );
+}
+
+/* QUEM SOMOS e CASAS DE ACOLHIMENTO: granulado */
+#quem-somos::before,
+#abrigos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* QUEM SOMOS: grafismo */
+.grafismo-inferior {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Mantém o conteúdo acima do desenho */
+.quem-somos__conteudo {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+  .grafismo-inferior {
+    width: 130%;
+    max-width: none;
+    left: -15%;
+    opacity: 0.75;
+  }
+}
+
+/* Desktop/notebook: texto à esquerda, mulher logo ao lado, grafismo no canto inferior esquerdo */
+@media (min-width: 901px) {
+  #quem-somos {
+    padding-top: 110px;
+  }
+  .grafismo-inferior {
+    width: 46%;
+  }
+  /* Casas de acolhimento: espaço embaixo do botão pro grafismo */
+  .abrigos-text {
+    padding-bottom: 80px;
+  }
+  /* proporção original texto/imagem (1.1 : 1), mulher no canto direito */
+  .quem-somos-container {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+    gap: 48px;
+    padding: 0 0 0 10%;
+  }
+  .quem-somos-text {
+    align-self: center;
+    /* a seção termina logo abaixo do botão; foto e grafismo sobem junto */
+    padding-bottom: 80px;
+  }
+  .quem-somos-image {
+    position: relative;
+    align-self: end;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .quem-somos-image img {
+    width: 100%;
+    max-width: clamp(220px, 38vw, 800px);
+    margin: 0 0 0 auto;
+  }
+}
+
+/* TÍTULOS */
+.quem-somos-text h2,
+.abrigos-text h2,
+.sobre-nos-subtitle {
+  color: var(--terra);
+}
+.sobre-nos-title,
+.parceiros-title {
+  color: var(--terra-escura);
+}
+.sobre-nos-title::after,
+.parceiros-title::after {
+  background: var(--terra-escura);
+}
+
+/* TEXTOS */
+.quem-somos-text p,
+.abrigos-text p,
+.sobre-nos-text,
+.dossie-text p {
+  color: var(--barro);
+}
+.sobre-nos-legend,
+.sobre-nos-subtitle-quote {
+  color: var(--barro-suave);
+}
+
+/* Seções de fundo terracota-marrom: títulos e textos claros pra manter a leitura */
+.quem-somos-text h2,
+.abrigos-text h2 {
+  color: #f4c9a4;
+}
+.quem-somos-text p,
+.abrigos-text p {
+  color: #f7eadf;
+}
+.btn-quem-somos,
+.btn-abrigos {
+  background-color: #fbf0e1 !important;
+  color: var(--terra-escura);
+}
+
+/* BOTÕES */
+.btn-quem-somos,
+.btn-abrigos {
+  background-color: var(--terra);
+  box-shadow: 0 4px 14px rgba(143, 62, 34, 0.3);
+}
+.btn-quem-somos:hover,
+.btn-abrigos:hover {
+  background-color: var(--terra-escura);
+  filter: none;
+}
+
+/* DOSSIÊ (card inteiro clicável) */
+.dossie-box {
+  background: #fdf5ee;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.dossie-box:hover,
+.dossie-box:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(110, 50, 25, 0.25);
+}
+.dossie-text h4 {
+  color: var(--terra-escura);
+}

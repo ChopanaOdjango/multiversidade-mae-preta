@@ -47,7 +47,7 @@ body {
   align-items: center;
   gap: 4rem;
   z-index: 9999;
-  background-color: #ffffffa4;
+  background-color: rgba(255, 250, 246, 0.94);
 }
 
 .logo-text {
@@ -80,6 +80,8 @@ body {
   font-weight: 700;
   font-size: 1.4rem;
   text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.06em;
 }
 
 .logo {
@@ -1267,7 +1269,7 @@ body {
   }
   .logo-subtitle {
     font-size: 1.2rem;
-    max-width: 165px;
+    white-space: nowrap;
   }
   .navbar .nav-list {
     gap: 2.6rem;

@@ -1,0 +1,362 @@
+/* Visual novo da página principal do Okan Ilu (carregado só no okan-ilu.html,
+   depois do okan-ilu-main.css). Menu, logo e contato não mudam. */
+:root {
+  --okan-azul: #1d2452;
+  --okan-azul-card: #232a5c;
+  --okan-laranja: #c4541a;
+  --okan-laranja-escuro: #a3400f;
+  --okan-creme: #fdf1e3;
+  --okan-pessego: #f4d9bd;
+}
+
+main {
+  padding-top: 0;
+}
+
+/* menu por cima da seção azul (senão o submenu some atrás dela) */
+.header {
+  position: relative !important;
+  z-index: 10000;
+}
+/* desktop: menu fixo no topo, acompanhando a rolagem como nas outras páginas */
+@media (min-width: 901px) {
+  .header {
+    position: fixed !important;
+  }
+  .section-okan-ilu {
+    margin-top: 64px !important;
+  }
+}
+@media (min-width: 901px) and (max-width: 1150px) {
+  .section-okan-ilu {
+    margin-top: 58px !important;
+  }
+}
+
+/* ---------- ABERTURA (azul com textura e ondas) ---------- */
+.section-okan-ilu {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  height: auto;
+  min-height: 0;
+  margin-top: 0;
+  background-color: var(--okan-azul);
+  background-image:
+    radial-gradient(ellipse at 60% 35%, rgba(60, 72, 140, 0.45) 0%, transparent 65%),
+    linear-gradient(125deg, #1a2048 0%, #262e66 50%, #161b3e 100%);
+}
+.section-okan-ilu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.okan-ondas {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-okan-ilu #img-okan-ilu,
+.section-okan-ilu #informacoes-okan-ilu {
+  position: relative;
+  z-index: 1;
+}
+/* a mulher fica na frente das ondas */
+.section-okan-ilu #img-okan-ilu {
+  z-index: 2;
+}
+
+.section-okan-ilu #informacoes-okan-ilu p {
+  font-family: "Karma", serif;
+  font-weight: 500;
+  color: #f6ece0;
+  line-height: 1.6;
+}
+/* traço laranja embaixo do título */
+.section-okan-ilu #informacoes-okan-ilu p::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 5px;
+  margin: 0 auto 24px;
+  border-radius: 999px;
+  background: var(--okan-laranja);
+}
+
+/* ---------- LINHA DO TEMPO (fundo pêssego com teias) ---------- */
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 60px 5% 80px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 30%, #fbe7d2 0%, transparent 70%),
+    linear-gradient(180deg, var(--okan-pessego) 0%, #f7e2cb 100%);
+}
+.timeline-wrapper > * {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#teia-planoFundo-topo,
+#teia-planoFundo-baixo {
+  z-index: -1;
+}
+#teia-planoFundo-topo img,
+#teia-planoFundo-baixo img {
+  /* teias cinzas viram cor de barro */
+  filter: sepia(1) saturate(2.2) hue-rotate(-12deg) brightness(0.85);
+  opacity: 0.22 !important;
+}
+
+.timeline-wrapper h2 {
+  color: var(--okan-azul);
+}
+.timeline-wrapper h2::after {
+  width: 260px;
+  height: 5px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, transparent, var(--okan-laranja) 15%, var(--okan-laranja) 85%, transparent);
+}
+
+/* linha vertical */
+.timeline::before {
+  width: 3px;
+  background-color: var(--okan-azul);
+}
+/* aranha no fim da linha */
+.timeline::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: -46px;
+  width: 26px;
+  height: 54px;
+  transform: translateX(-50%);
+  background: url("../img/okan-ilu-2017/aranhas-card.png") center / contain no-repeat;
+}
+
+/* braço que liga o card na linha */
+.timeline-item::after {
+  height: 3px;
+  background-color: var(--okan-azul);
+}
+/* bolinha na linha */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 46px;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--okan-creme);
+  border: 3px solid var(--okan-laranja);
+  box-shadow: inset 0 0 0 4px var(--okan-creme), inset 0 0 0 10px var(--okan-laranja);
+  z-index: 3;
+}
+
+/* aranhas pequenas nos cards: some, a aranha agora fica no fim da linha */
+.div-aranha-direita,
+.div-aranha-esquerda {
+  display: none;
+}
+
+/* ---------- CARDS ---------- */
+.timeline-card {
+  padding: 28px 30px 30px;
+  border-radius: 26px;
+  border: none;
+  box-shadow: 0 14px 30px rgba(90, 40, 15, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+/* card inteiro sobe um pouco no hover, junto com o botão */
+.timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px rgba(90, 40, 15, 0.26);
+}
+.timeline-card h3 {
+  font-family: "Karma", serif;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+/* tracinho laranja depois do ano */
+.timeline-card h3::after {
+  content: "";
+  width: 52px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--okan-laranja);
+}
+.timeline-card p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 22px;
+}
+.timeline-card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto;
+  max-width: none;
+  height: auto;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.timeline-card button::after {
+  content: "→";
+  font-size: 1.25em;
+  line-height: 1;
+}
+.timeline-card button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+/* card claro (esquerda) e escuro (direita), alternando pela posição */
+.timeline-item:nth-child(odd) .timeline-card {
+  background: var(--okan-creme);
+  color: var(--okan-azul);
+}
+.timeline-item:nth-child(odd) .timeline-card button {
+  background: var(--okan-laranja-escuro);
+  color: #fff;
+}
+.timeline-item:nth-child(even) .timeline-card {
+  background: var(--okan-azul-card);
+  color: #f6ece0;
+}
+.timeline-item:nth-child(even) .timeline-card h3 {
+  color: #f6ece0;
+}
+.timeline-item:nth-child(even) .timeline-card button {
+  background: var(--okan-creme);
+  color: var(--okan-azul);
+}
+
+/* ---------- CELULAR ---------- */
+@media screen and (max-width: 767px) {
+  .section-okan-ilu #informacoes-okan-ilu {
+    margin: 0;
+    padding: 30px 6% 22vw;
+    font-size: 14px;
+  }
+  .okan-ondas {
+    width: 140%;
+    right: -20%;
+  }
+  .timeline-card p {
+    font-size: 1.6rem;
+  }
+  .timeline-card button {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- TABLET E DESKTOP ---------- */
+@media screen and (min-width: 768px) {
+  .section-okan-ilu {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    padding: 30px 6% 0 0;
+  }
+  .section-okan-ilu #img-okan-ilu {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    align-self: end;
+  }
+  .section-okan-ilu #img-okan-ilu img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+  }
+  .section-okan-ilu #informacoes-okan-ilu {
+    margin: 0;
+    padding: 0 0 13vw;
+  }
+  .section-okan-ilu #informacoes-okan-ilu img {
+    margin: 10px 0 14px;
+  }
+  .okan-ondas {
+    width: 80%;
+  }
+
+  /* linha e bolinhas no meio */
+  .timeline::after,
+  .timeline-item::before {
+    left: 50%;
+  }
+  .timeline-item:nth-child(odd)::after,
+  .timeline-item:nth-child(even)::after {
+    top: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-okan-ilu {
+    height: auto;
+    padding-right: 7%;
+  }
+  .section-okan-ilu #img-okan-ilu {
+    width: auto;
+  }
+  .section-okan-ilu #img-okan-ilu img {
+    max-width: 480px;
+  }
+  .section-okan-ilu #informacoes-okan-ilu {
+    font-size: 18px;
+    margin: 0;
+    padding: 0 0 11vw;
+  }
+  .section-okan-ilu #informacoes-okan-ilu img {
+    width: 40rem;
+  }
+
+  .timeline-card {
+    width: calc(40% - 25px);
+  }
+  .timeline-card p {
+    font-size: 1.75rem;
+  }
+  .timeline-card button {
+    width: auto;
+    height: auto;
+    font-size: 1.7rem;
+  }
+  /* cards em degraus, como na referência */
+  .timeline-item + .timeline-item {
+    margin-top: -110px;
+  }
+  .timeline-item {
+    margin-bottom: 0;
+  }
+  /* braço vai do meio até a borda do card (card = 40% - 25px) */
+  .timeline-item:nth-child(odd)::after,
+  .timeline-item:nth-child(even)::after {
+    width: calc(10% + 25px);
+  }
+}
