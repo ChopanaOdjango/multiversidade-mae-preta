@@ -1466,3 +1466,42 @@ body {
     font-size: 1.3rem;
   }
 }
+
+/* Logo menor no celular para o menu hambúrguer caber ao lado */
+@media (max-width: 900px) {
+  .header {
+    gap: 1.2rem;
+  }
+  .logo-text {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .logo-title {
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+  }
+  .logo-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+  }
+  #menu-toggle {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 420px) {
+  .logo-title {
+    font-size: 2rem;
+  }
+  .logo-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+}
+@media (max-width: 340px) {
+  .logo-title {
+    font-size: 1.75rem;
+  }
+  .logo-subtitle {
+    font-size: 0.85rem;
+  }
+}
